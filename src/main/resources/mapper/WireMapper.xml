@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xydz.fullperformancereport.mapper.WireMapper">
+
+    <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.Wire">
+            <result property="reportNo" column="REPORT_NO" jdbcType="VARCHAR"/>
+            <result property="id" column="ID" jdbcType="DECIMAL"/>
+            <result property="num" column="NUM" jdbcType="DECIMAL"/>
+            <result property="color" column="COLOR" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        REPORT_NO,ID,NUM,
+        COLOR,DIAMETER_TD1,DIAMETER_TD2,
+        DIAMETER_TD3,DIAMETER_TD4,DIAMETER_TD5,
+        DIAMETER_TD6,INSUL_OD_TD1,INSUL_OD_TD2,
+        INSUL_OD_TD3,INSUL_OD_TD4,INSUL_OD_TD5,
+        INSUL_OD_TD6,INSUL_THK_TD1,INSUL_THK_TD2,
+        INSUL_THK_TD3,INSUL_THK_TD4,INSUL_THK_TD5,
+        INSUL_THK_TD6,INSUL_THK_TD7,INSUL_THK_TD8,
+        INSUL_THK_TD9,INSUL_THK_TD10,INSUL_UNAGED_ELONGATION_TD1,
+        INSUL_UNAGED_ELONGATION_TD2,INSUL_UNAGED_ELONGATION_TD3,INSUL_UNAGED_ELONGATION_TD4,
+        INSUL_UNAGED_ELONGATION_TD5,INSUL_UNAGED_ELONGATION_TD6,INSUL_UNAGED_PULL_TD1,
+        INSUL_UNAGED_PULL_TD2,INSUL_UNAGED_PULL_TD3,INSUL_UNAGED_PULL_TD4,
+        INSUL_UNAGED_PULL_TD5,INSUL_UNAGED_PULL_TD6,INSUL_AGING_ELONGATION_TD1,
+        INSUL_AGING_ELONGATION_TD2,INSUL_AGING_ELONGATION_TD3,INSUL_AGING_ELONGATION_TD4,
+        INSUL_AGING_ELONGATION_TD5,INSUL_AGING_ELONGATION_TD6,INSUL_AGING_PULL_TD1,
+        INSUL_AGING_PULL_TD2,INSUL_AGING_PULL_TD3,INSUL_AGING_PULL_TD4,
+        INSUL_AGING_PULL_TD5,INSUL_AGING_PULL_TD6,HTG_FRONT_AVG_DIAMETER,
+        HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD
+    </sql>
+</mapper>
