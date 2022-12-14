@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xydz.fullperformancereport.mapper.UlElectronicWireMapper">
+
+    <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.UlElectronicWire">
+            <result property="customerName" column="CUSTOMER_NAME" jdbcType="VARCHAR"/>
+            <result property="submitter" column="SUBMITTER" jdbcType="VARCHAR"/>
+            <result property="testBasis" column="TEST_BASIS" jdbcType="VARCHAR"/>
+            <result property="productName" column="PRODUCT_NAME" jdbcType="VARCHAR"/>
+            <result property="specification" column="SPECIFICATION" jdbcType="VARCHAR"/>
+            <result property="reportNo" column="REPORT_NO" jdbcType="VARCHAR"/>
+            <result property="submitterDate" column="SUBMITTER_DATE" jdbcType="TIMESTAMP"/>
+            <result property="sampleStatus" column="SAMPLE_STATUS" jdbcType="VARCHAR"/>
+            <result property="startTestDate" column="START_TEST_DATE" jdbcType="TIMESTAMP"/>
+            <result property="endTestDate" column="END_TEST_DATE" jdbcType="TIMESTAMP"/>
+            <result property="printingErasibilit" column="PRINTING_ERASIBILIT" jdbcType="VARCHAR"/>
+            <result property="conductorCorrosion" column="CONDUCTOR_CORROSION" jdbcType="VARCHAR"/>
+            <result property="tsCrack" column="TS_CRACK" jdbcType="VARCHAR"/>
+            <result property="ltBendCrack" column="LT_BEND_CRACK" jdbcType="VARCHAR"/>
+            <result property="flexibilityCrack" column="FLEXIBILITY_CRACK" jdbcType="VARCHAR"/>
+            <result property="dielectricIiiPok" column="DIELECTRIC_III_POK" jdbcType="VARCHAR"/>
+            <result property="dielectricIPok" column="DIELECTRIC_I_POK" jdbcType="VARCHAR"/>
+            <result property="hvdcWirePok" column="HVDC_WIRE_POK" jdbcType="VARCHAR"/>
+            <result property="lightCottonVw1Td1" column="LIGHT_COTTON_VW1_TD1" jdbcType="VARCHAR"/>
+            <result property="lightCottonVw1Td2" column="LIGHT_COTTON_VW1_TD2" jdbcType="VARCHAR"/>
+            <result property="lightCottonVw1Td3" column="LIGHT_COTTON_VW1_TD3" jdbcType="VARCHAR"/>
+            <result property="lightCottonFt2Td1" column="LIGHT_COTTON_FT2_TD1" jdbcType="VARCHAR"/>
+            <result property="lightCottonFt2Td2" column="LIGHT_COTTON_FT2_TD2" jdbcType="VARCHAR"/>
+            <result property="lightCottonFt2Td3" column="LIGHT_COTTON_FT2_TD3" jdbcType="VARCHAR"/>
+            <result property="lightCottonUlTd1" column="LIGHT_COTTON_UL_TD1" jdbcType="VARCHAR"/>
+            <result property="lightCottonUlTd2" column="LIGHT_COTTON_UL_TD2" jdbcType="VARCHAR"/>
+            <result property="lightCottonUlTd3" column="LIGHT_COTTON_UL_TD3" jdbcType="VARCHAR"/>
+            <result property="majorMeasured" column="MAJOR_MEASURED" jdbcType="VARCHAR"/>
+            <result property="checked" column="CHECKED" jdbcType="VARCHAR"/>
+            <result property="approved" column="APPROVED" jdbcType="VARCHAR"/>
+            <result property="certigier" column="CERTIGIER" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUserId" column="CREATE_USER_ID" jdbcType="VARCHAR"/>
+            <result property="createUserName" column="CREATE_USER_NAME" jdbcType="VARCHAR"/>
+            <result property="description" column="DESCRIPTION" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        CUSTOMER_NAME,SUBMITTER,TEST_BASIS,
+        PRODUCT_NAME,SPECIFICATION,REPORT_NO,
+        SUBMITTER_DATE,SAMPLE_STATUS,START_TEST_DATE,
+        END_TEST_DATE,PRINTING_ERASIBILIT,CONDUCTOR_CORROSION,
+        TS_CRACK,LT_BEND_CRACK,FLEXIBILITY_CRACK,
+        DIELECTRIC_III_POK,DIELECTRIC_I_POK,HVDC_WIRE_POK,
+        LIGHT_COTTON_VW1_TD1,LIGHT_COTTON_VW1_TD2,LIGHT_COTTON_VW1_TD3,
+        LIGHT_COTTON_FT2_TD1,LIGHT_COTTON_FT2_TD2,LIGHT_COTTON_FT2_TD3,
+        LIGHT_COTTON_UL_TD1,LIGHT_COTTON_UL_TD2,LIGHT_COTTON_UL_TD3,
+        MAJOR_MEASURED,CHECKED,APPROVED,
+        CERTIGIER,CREATE_TIME,CREATE_USER_ID,
+        CREATE_USER_NAME,DESCRIPTION,INSUL_AVG_THK,
+        INSUL_MIN_THK,SHEATH_AVG_THK,SHEATH_MIN_THK,
+        INSUL_BI_TEMP,INSUL_BI_TIME,INSUL_UNAGED_EI,
+        INSUL_UNAGED_TS,INSUL_AGING_EI,INSUL_AGING_TS,
+        SHEATH_BI_TEMP,SHEATH_BI_TIME,SHEATH_UNAGED_EI,
+        SHEATH_UNAGED_TS,SHEATH_AGING_EI,SHEATH_AGING_TS,
+        CONDUCTOR_CORROSION_TEMP,CONDUCTOR_CORROSION_TIME,TS_TEMP,
+        TS_TIME,TS_LN,LT_BEND_TEMP,
+        LT_BEND_TIME,LT_BEND_LN,FLEXIBILITY_TEMP,
+        FLEXIBILITY_TIME,FLEXIBILITY_LN,CONDUCTOR20_DCR,
+        CONDUCTOR20_DCR_TD1,CONDUCTOR20_DCR_TD2,DIELECTRIC_III_WITHSTAND_VOLTAGE,
+        DIELECTRIC_III_WITHSTAND_VOLTAGE_TIME,DIELECTRIC_I_NUM,DIELECTRIC_I_TEMP,
+        DIELECTRIC_I_TIME,DIELECTRIC_I_GIRTH,DIELECTRIC_I_LN,
+        DIELECTRIC_I_WITHSTAND_VOLTAGE,DIELECTRIC_I_WITHSTAND_VOLTAGE_TIEM,DIELECTRIC_I_POK_NUM,
+        HVDC_WIRE_NUM,HVDC_WIRE_BAKING_TEMP,HVDC_WIRE_BAKING_TIME,
+        HVDC_WIRE_DISCHARGE_TEMP,HVDC_WIRE_DISCHARGE_PCT,HVDC_WIRE_DISCHARGE_TIME,
+        HVDC_WIRE_TEST_BAR,HVDC_WIRE_LN,HVDC_WIRE_DCV,
+        HVDC_WIRE_DCV_TIME,FIRST_FLAME_RETARDING_TD1,FIRST_FLAME_RETARDING_TD2,
+        FIRST_FLAME_RETARDING_TD3,SECOND_FLAME_RETARDING_TD1,SECOND_FLAME_RETARDING_TD2,
+        SECOND_FLAME_RETARDING_TD3,THIRD_FLAME_RETARDING_TD1,THIRD_FLAME_RETARDING_TD2,
+        THIRD_FLAME_RETARDING_TD3,FOURTH_FLAME_RETARDING_TD1,FOURTH_FLAME_RETARDING_TD2,
+        FOURTH_FLAME_RETARDING_TD3,FIFTH_FLAME_RETARDING_TD1,FIFTH_FLAME_RETARDING_TD2,
+        FIFTH_FLAME_RETARDING_TD3,FLAG_BURNING_AREA_TD1,FLAG_BURNING_AREA_TD2,
+        FLAG_BURNING_AREA_TD3,BURNING_AFTER_LENGHT_TD1,BURNING_AFTER_LENGHT_TD2,
+        BURNING_AFTER_LENGHT_TD3,BURNING_TIME_TD1,BURNING_TIME_TD2,
+        BURNING_TIME_TD3,THERMAL_ELONGATION
+    </sql>
+</mapper>
