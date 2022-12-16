@@ -43,6 +43,7 @@ public class UlElectronicWire implements Serializable {
     /**
      * 报告编号
      */
+    @TableId
     private String reportNo;
 
     /**

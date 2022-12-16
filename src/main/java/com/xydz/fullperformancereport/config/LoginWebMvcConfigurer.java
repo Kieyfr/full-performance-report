@@ -24,12 +24,10 @@ public class LoginWebMvcConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // addPathPatterns 用于添加拦截规则，/**表示拦截所有请求
-        // excludePathPatterns 用户排除拦截
-
         registry.addInterceptor(loginHandlerInterceptor)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/login");
+                .excludePathPatterns("/user/login")
+                .excludePathPatterns("/swagger-resources/**","/swagger-ui/**", "/v3/**", "/error");
     }
 
     @Override

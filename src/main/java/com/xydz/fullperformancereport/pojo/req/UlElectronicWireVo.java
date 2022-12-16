@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.xydz.fullperformancereport.pojo.entity.PublicData;
 import com.xydz.fullperformancereport.pojo.entity.UlElectronicWire;
+import com.xydz.fullperformancereport.pojo.entity.Visible;
 import com.xydz.fullperformancereport.pojo.entity.Wire;
 import lombok.Data;
 
@@ -31,6 +32,11 @@ public class UlElectronicWireVo implements Serializable {
      * 公共数据
      */
     private PublicData publicData;
+
+    /**
+     * 是否显示
+     */
+    private Visible visible;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

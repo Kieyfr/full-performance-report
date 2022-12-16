@@ -1,76 +1,48 @@
 package com.xydz.fullperformancereport.util;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
+
+import cn.hutool.jwt.JWT;
+import cn.hutool.jwt.JWTUtil;
 import com.xydz.fullperformancereport.pojo.entity.User;
 
-import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
+/**
+ * @Author xiachenchen
+ * @ClassName: JwtUtil
+ * @Description: token解析工具类
+ * @Date 2022/12/14
+*/
 public class JwtUtil {
 
-    /**
-     * 过期时间
-     */
-    public static final long EXPIRE_TIME = 3 * 24 * 60 * 60 * 1000;
+    public static final byte[] SECRET = "SECRET".getBytes();
 
-    public static final String SECRET = "SECRET";
-
-    /**
-     * 生成token
-     * @param user
-     * @return
-     */
-    public static String sign(User user){
-        Date expireDate = new Date(System.currentTimeMillis() + EXPIRE_TIME);
-        return JWT.create()
-                .withClaim("id", user.getUserId())
-                .withClaim("name", user.getUserName())
-                .withClaim("password", user.getUserPassword())
-                .withClaim("permissions", user.getUserPermissions())
-                .withExpiresAt(expireDate)
-                .sign(Algorithm.HMAC256(SECRET));
+    public static Map<String, Object> getMap(User user){
+        Map<String, Object> map = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 1L;
+            {
+                put("id", user.getUserId());
+                put("expire_time", System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 15);
+            }
+        };
+        return map;
     }
 
-    /**
-     * 校验token
-     * @param token
-     * @return
-     */
+    public static String createToken(User user){
+        return JWTUtil.createToken(getMap(user), SECRET);
+    }
+
     public static boolean verify(String token){
-        try {
-            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SECRET)).build();
-            DecodedJWT decodedJWT  = verifier.verify(token);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
+        return JWTUtil.verify(token,SECRET);
     }
 
-    /**
-     * 获取token内的携带的用户名信息
-     * @param token
-     * @return
-     */
-    public static String getUserNameByToken(String token){
-        DecodedJWT decodedJWT = JWT.decode(token);
-        return decodedJWT.getClaim("name").asString();
+    public static String getData(String token,String dataName){
+        JWT jwt = JWTUtil.parseToken(token);
+        return (String)jwt.getPayload(dataName);
     }
 
-    /**
-     * 获取token内的携带的所有用户名信息
-     * @param token
-     * @return
-     */
-    public static User getUserByToken(String token){
-        DecodedJWT decodedJWT = JWT.decode(token);
-        User user = new User();
-        user.setUserId(decodedJWT.getClaim("id").asString());
-        user.setUserName(decodedJWT.getClaim("name").asString());
-        user.setUserPassword(decodedJWT.getClaim("password").asString());
-        user.setUserPermissions(decodedJWT.getClaim("permissions").asString());
-        return user;
-    }
+
+
 
 }
