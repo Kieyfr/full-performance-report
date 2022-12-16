@@ -2,10 +2,10 @@ package com.xydz.fullperformancereport.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xydz.fullperformancereport.pojo.entity.*;
-import com.xydz.fullperformancereport.pojo.req.UlElectronicWireVo;
+import com.xydz.fullperformancereport.pojo.req.ReportVo;
 import com.xydz.fullperformancereport.service.PublicDataService;
-import com.xydz.fullperformancereport.service.UlElectronicWireService;
-import com.xydz.fullperformancereport.mapper.UlElectronicWireMapper;
+import com.xydz.fullperformancereport.service.ReportService;
+import com.xydz.fullperformancereport.mapper.ReportMapper;
 import com.xydz.fullperformancereport.service.VisibleService;
 import com.xydz.fullperformancereport.service.WireService;
 import com.xydz.fullperformancereport.util.LoginUtil;
@@ -21,8 +21,8 @@ import java.util.List;
 * @createDate 2022-12-12 15:24:26
 */
 @Service
-public class UlElectronicWireServiceImpl extends ServiceImpl<UlElectronicWireMapper, UlElectronicWire>
-    implements UlElectronicWireService{
+public class ReportServiceImpl extends ServiceImpl<ReportMapper, Report>
+    implements ReportService {
 
     @Autowired
     private WireService wireService;
@@ -35,24 +35,34 @@ public class UlElectronicWireServiceImpl extends ServiceImpl<UlElectronicWireMap
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public boolean saveUlElectronicWire(UlElectronicWireVo ulElectronicWireVo) {
-        UlElectronicWire ulElectronicWire = ulElectronicWireVo.getUlElectronicWire();
-        List<Wire> wireList = ulElectronicWireVo.getWireList();
-        PublicData publicData = ulElectronicWireVo.getPublicData();
-        Visible visible = ulElectronicWireVo.getVisible();
+    public boolean saveReportVo(ReportVo reportVo) {
+        Report report = reportVo.getReport();
+        List<Wire> wireList = reportVo.getWireList();
+        PublicData publicData = reportVo.getPublicData();
+        Visible visible = reportVo.getVisible();
         User user = LoginUtil.getLoginUser();
-        String reportNo = ulElectronicWire.getReportNo();
-        ulElectronicWire.setCreateUserId(user.getUserId());
-        ulElectronicWire.setCreateUserName(user.getUserName());
+        String reportNo = report.getReportNo();
+        report.setCreateUserId(user.getUserId());
+        report.setCreateUserName(user.getUserName());
         publicData.setReportNo(reportNo);
         visible.setReportNo(reportNo);
         for (Wire wire : wireList){
             wire.setReportNo(reportNo);
         }
-        save(ulElectronicWire);
+        save(report);
         wireService.saveBatch(wireList, wireList.size());
         publicDataService.save(publicData);
         visibleService.save(visible);
+        return true;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public boolean delReportVo(String reportNo) {
+        removeById(reportNo);
+        wireService.removeById(reportNo);
+        publicDataService.removeById(reportNo);
+        visibleService.removeById(reportNo);
         return true;
     }
 }

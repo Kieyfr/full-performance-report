@@ -3,7 +3,7 @@ package com.xydz.fullperformancereport.pojo.req;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.xydz.fullperformancereport.pojo.entity.PublicData;
-import com.xydz.fullperformancereport.pojo.entity.UlElectronicWire;
+import com.xydz.fullperformancereport.pojo.entity.Report;
 import com.xydz.fullperformancereport.pojo.entity.Visible;
 import com.xydz.fullperformancereport.pojo.entity.Wire;
 import lombok.Data;
@@ -17,11 +17,11 @@ import java.util.List;
  */
 @TableName(value ="FPR_UL_ELECTRONIC_WIRE")
 @Data
-public class UlElectronicWireVo implements Serializable {
+public class ReportVo implements Serializable {
     /**
      * UI电子线表
      */
-    private UlElectronicWire ulElectronicWire;
+    private Report report;
 
     /**
      * 芯线列表

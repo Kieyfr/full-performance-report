@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 /**
@@ -33,7 +35,7 @@ public class User implements Serializable {
     /**
      * 用户权限
      */
-    private String userPermissions;
+    private Integer userPermissions;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

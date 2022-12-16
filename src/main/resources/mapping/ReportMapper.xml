@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xydz.fullperformancereport.mapper.UlElectronicWireMapper">
+<mapper namespace="com.xydz.fullperformancereport.mapper.ReportMapper">
 
-    <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.UlElectronicWire">
+    <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.Report">
             <result property="customerName" column="CUSTOMER_NAME" jdbcType="VARCHAR"/>
             <result property="submitter" column="SUBMITTER" jdbcType="VARCHAR"/>
             <result property="testBasis" column="TEST_BASIS" jdbcType="VARCHAR"/>

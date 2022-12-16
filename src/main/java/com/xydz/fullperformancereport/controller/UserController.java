@@ -5,6 +5,7 @@ import com.xydz.fullperformancereport.pojo.entity.User;
 import com.xydz.fullperformancereport.pojo.resp.ResponseData;
 import com.xydz.fullperformancereport.service.UserService;
 import com.xydz.fullperformancereport.util.JwtUtil;
+import com.xydz.fullperformancereport.util.LoginUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +41,18 @@ public class UserController {
             return new ResponseData<>("401","密码错误",null);
         }
         return new ResponseData<>("404","用户不存在",null);
+    }
+
+    /**
+     * 获取登录的用户信息
+     *
+     */
+    @PostMapping("getLoginUserData")
+    @ApiOperation(value = "获取登录用户信息")
+    public ResponseData<User> getLoginUserData(){
+        User user = LoginUtil.getLoginUser();
+        user.setUserPassword("");
+        return new ResponseData<User>("200","获取成功",user);
     }
 
 }

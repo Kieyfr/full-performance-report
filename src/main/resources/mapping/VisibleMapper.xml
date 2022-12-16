@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xydz.fullperformancereport.mapper.VisibleMapper">
+
+    <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.Visible">
+            <result property="isColor" column="IS_COLOR" jdbcType="DECIMAL"/>
+            <result property="isNum" column="IS_NUM" jdbcType="DECIMAL"/>
+            <result property="isDiameter" column="IS_DIAMETER" jdbcType="DECIMAL"/>
+            <result property="isCsa" column="IS_CSA" jdbcType="DECIMAL"/>
+            <result property="isInsulOd" column="IS_INSUL_OD" jdbcType="DECIMAL"/>
+            <result property="isInsulThkAvg" column="IS_INSUL_THK_AVG" jdbcType="DECIMAL"/>
+            <result property="isInsulThkMin" column="IS_INSUL_THK_MIN" jdbcType="DECIMAL"/>
+            <result property="isSheathOd" column="IS_SHEATH_OD" jdbcType="DECIMAL"/>
+            <result property="isSheathThkAvg" column="IS_SHEATH_THK_AVG" jdbcType="DECIMAL"/>
+            <result property="isSheathThkMin" column="IS_SHEATH_THK_MIN" jdbcType="DECIMAL"/>
+            <result property="isInsulBiCondition" column="IS_INSUL_BI_CONDITION" jdbcType="DECIMAL"/>
+            <result property="isInsulUnagedEi" column="IS_INSUL_UNAGED_EI" jdbcType="DECIMAL"/>
+            <result property="isInsulUnagedTs" column="IS_INSUL_UNAGED_TS" jdbcType="DECIMAL"/>
+            <result property="isInsulAgingEi" column="IS_INSUL_AGING_EI" jdbcType="DECIMAL"/>
+            <result property="isInsulAgingTs" column="IS_INSUL_AGING_TS" jdbcType="DECIMAL"/>
+            <result property="isSheathBiCondition" column="IS_SHEATH_BI_CONDITION" jdbcType="DECIMAL"/>
+            <result property="isSheathUnagedEi" column="IS_SHEATH_UNAGED_EI" jdbcType="DECIMAL"/>
+            <result property="isSheathUnagedTs" column="IS_SHEATH_UNAGED_TS" jdbcType="DECIMAL"/>
+            <result property="isSheathAgingEi" column="IS_SHEATH_AGING_EI" jdbcType="DECIMAL"/>
+            <result property="isSheathAgingTs" column="IS_SHEATH_AGING_TS" jdbcType="DECIMAL"/>
+            <result property="isPrintingErasibilit" column="IS_PRINTING_ERASIBILIT" jdbcType="DECIMAL"/>
+            <result property="isConductorCorrosion" column="IS_CONDUCTOR_CORROSION" jdbcType="DECIMAL"/>
+            <result property="isTsCrack" column="IS_TS_CRACK" jdbcType="DECIMAL"/>
+            <result property="isLtBendCrack" column="IS_LT_BEND_CRACK" jdbcType="DECIMAL"/>
+            <result property="isFlexibilityCrack" column="IS_FLEXIBILITY_CRACK" jdbcType="DECIMAL"/>
+            <result property="isInsulHtgDeformationRate" column="IS_INSUL_HTG_DEFORMATION_RATE" jdbcType="DECIMAL"/>
+            <result property="isSheathHtgDeformationRate" column="IS_SHEATH_HTG_DEFORMATION_RATE" jdbcType="DECIMAL"/>
+            <result property="isConductor20Dcr" column="IS_CONDUCTOR20_DCR" jdbcType="DECIMAL"/>
+            <result property="isIrCalc" column="IS_IR_CALC" jdbcType="DECIMAL"/>
+            <result property="isDielectricIiiPok" column="IS_DIELECTRIC_III_POK" jdbcType="DECIMAL"/>
+            <result property="isDielectricIPok" column="IS_DIELECTRIC_I_POK" jdbcType="DECIMAL"/>
+            <result property="isHvdcWirePok" column="IS_HVDC_WIRE_POK" jdbcType="DECIMAL"/>
+            <result property="isFirstFlameRetarding" column="IS_FIRST_FLAME_RETARDING" jdbcType="DECIMAL"/>
+            <result property="isSecondFlameRetarding" column="IS_SECOND_FLAME_RETARDING" jdbcType="DECIMAL"/>
+            <result property="isThirdFlameRetarding" column="IS_THIRD_FLAME_RETARDING" jdbcType="DECIMAL"/>
+            <result property="isFourthFlameRetarding" column="IS_FOURTH_FLAME_RETARDING" jdbcType="DECIMAL"/>
+            <result property="isFifthFlameRetarding" column="IS_FIFTH_FLAME_RETARDING" jdbcType="DECIMAL"/>
+            <result property="isFlagBurningArea" column="IS_FLAG_BURNING_AREA" jdbcType="DECIMAL"/>
+            <result property="isLightCottonVw1" column="IS_LIGHT_COTTON_VW1" jdbcType="DECIMAL"/>
+            <result property="isBurningAfterLenght" column="IS_BURNING_AFTER_LENGHT" jdbcType="DECIMAL"/>
+            <result property="isLightCottonFt2" column="IS_LIGHT_COTTON_FT2" jdbcType="DECIMAL"/>
+            <result property="isBurningTime" column="IS_BURNING_TIME" jdbcType="DECIMAL"/>
+            <result property="isLightCottonUl" column="IS_LIGHT_COTTON_UL" jdbcType="DECIMAL"/>
+            <result property="isThermalElongation" column="IS_THERMAL_ELONGATION" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        IS_COLOR,IS_NUM,IS_DIAMETER,
+        IS_CSA,IS_INSUL_OD,IS_INSUL_THK_AVG,
+        IS_INSUL_THK_MIN,IS_SHEATH_OD,IS_SHEATH_THK_AVG,
+        IS_SHEATH_THK_MIN,IS_INSUL_BI_CONDITION,IS_INSUL_UNAGED_EI,
+        IS_INSUL_UNAGED_TS,IS_INSUL_AGING_EI,IS_INSUL_AGING_TS,
+        IS_SHEATH_BI_CONDITION,IS_SHEATH_UNAGED_EI,IS_SHEATH_UNAGED_TS,
+        IS_SHEATH_AGING_EI,IS_SHEATH_AGING_TS,IS_PRINTING_ERASIBILIT,
+        IS_CONDUCTOR_CORROSION,IS_TS_CRACK,IS_LT_BEND_CRACK,
+        IS_FLEXIBILITY_CRACK,IS_INSUL_HTG_DEFORMATION_RATE,IS_SHEATH_HTG_DEFORMATION_RATE,
+        IS_CONDUCTOR20_DCR,IS_IR_CALC,IS_DIELECTRIC_III_POK,
+        IS_DIELECTRIC_I_POK,IS_HVDC_WIRE_POK,IS_FIRST_FLAME_RETARDING,
+        IS_SECOND_FLAME_RETARDING,IS_THIRD_FLAME_RETARDING,IS_FOURTH_FLAME_RETARDING,
+        IS_FIFTH_FLAME_RETARDING,IS_FLAG_BURNING_AREA,IS_LIGHT_COTTON_VW1,
+        IS_BURNING_AFTER_LENGHT,IS_LIGHT_COTTON_FT2,IS_BURNING_TIME,
+        IS_LIGHT_COTTON_UL,IS_THERMAL_ELONGATION
+    </sql>
+</mapper>

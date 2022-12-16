@@ -1,17 +1,16 @@
 package com.xydz.fullperformancereport.controller;
 
-import com.xydz.fullperformancereport.pojo.entity.User;
-import com.xydz.fullperformancereport.pojo.req.UlElectronicWireVo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.xydz.fullperformancereport.pojo.entity.Report;
+import com.xydz.fullperformancereport.pojo.req.ReportVo;
 import com.xydz.fullperformancereport.pojo.resp.ResponseData;
-import com.xydz.fullperformancereport.service.UlElectronicWireService;
-import com.xydz.fullperformancereport.util.LoginUtil;
+import com.xydz.fullperformancereport.service.ReportService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("report")
@@ -19,37 +18,48 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReportController {
 
     @Autowired
-    private UlElectronicWireService ulElectronicWireService;
+    private ReportService reportService;
 
     /**
-     * UI电子线报告生成
+     * 生成报告
      *
-     * @param ulElectronicWireVo
+     * @param reportVo
     */
-    @PostMapping("saveULElectronicWire")
-    @ApiOperation(value = "UI电子线报告生成")
-    public ResponseData<String> saveULElectronicWire(@RequestBody UlElectronicWireVo ulElectronicWireVo){
-        System.out.println(ulElectronicWireVo);
-        boolean state = ulElectronicWireService.saveUlElectronicWire(ulElectronicWireVo);
+    @PostMapping("saveReport")
+    @ApiOperation(value = "生成报告")
+    public ResponseData<String> saveReport(@RequestBody ReportVo reportVo){
+        boolean state = reportService.saveReportVo(reportVo);
         if (state){
             return new ResponseData<>("200","生成成功",null);
         }
         return new ResponseData<>("500","生成失败",null);
     }
 
-//    /**
-//     * 获取报告列表
-//     *
-//     * @param ulElectronicWireVo
-//     */
-//    @PostMapping("saveULElectronicWire")
-//    @ApiOperation(value = "UI电子线报告生成")
-//    public ResponseData<String> saveULElectronicWire(@RequestBody UlElectronicWireVo ulElectronicWireVo){
-//        System.out.println(ulElectronicWireVo);
-//        boolean state = ulElectronicWireService.saveUlElectronicWire(ulElectronicWireVo);
-//        if (state){
-//            return new ResponseData<>("200","生成成功",null);
-//        }
-//        return new ResponseData<>("500","生成失败",null);
-//    }
+    /**
+     * 查询报告
+     *
+     */
+    @PostMapping("getReports")
+    @ApiOperation(value = "查询报告")
+    public ResponseData<List<Report> > getReports(){
+        QueryWrapper<Report> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("CREATE_TIME");
+        List<Report> reportList = reportService.list(queryWrapper);
+        return new ResponseData<List<Report>>("200","生成成功",reportList);
+    }
+
+    /**
+     * 删除报告
+     *
+     * @param reportNo
+     */
+    @GetMapping("delReport")
+    @ApiOperation(value = "删除报告")
+    public ResponseData<List<Report> > delReport(@RequestParam("reportNo")String reportNo){
+        boolean state = reportService.delReportVo(reportNo);
+        if (state){
+            return new ResponseData<>("200","删除成功",null);
+        }
+        return new ResponseData<>("500","删除失败",null);
+    }
 }

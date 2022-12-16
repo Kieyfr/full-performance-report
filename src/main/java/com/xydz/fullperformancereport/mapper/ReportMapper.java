@@ -1,6 +1,6 @@
 package com.xydz.fullperformancereport.mapper;
 
-import com.xydz.fullperformancereport.pojo.entity.UlElectronicWire;
+import com.xydz.fullperformancereport.pojo.entity.Report;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2022-12-12 15:24:26
 * @Entity com.xydz.fullperformancereport.pojo.entity.UlElectronicWire
 */
-public interface UlElectronicWireMapper extends BaseMapper<UlElectronicWire> {
+public interface ReportMapper extends BaseMapper<Report> {
 
 }
 

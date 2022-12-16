@@ -6,15 +6,18 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
- * 全性能报告表UI电子线表
- * @TableName FPR_UL_ELECTRONIC_WIRE
+ * 全性能报告表
+ * @TableName FPR_REPORT
  */
-@TableName(value ="FPR_UL_ELECTRONIC_WIRE")
+@TableName(value ="FPR_REPORT")
 @Data
-public class UlElectronicWire implements Serializable {
+public class Report implements Serializable {
     /**
      * 客户名称
      */
@@ -49,6 +52,8 @@ public class UlElectronicWire implements Serializable {
     /**
      * 送检日期
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")
     private Date submitterDate;
 
     /**
@@ -59,11 +64,15 @@ public class UlElectronicWire implements Serializable {
     /**
      * 测试日期起始
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")
     private Date startTestDate;
 
     /**
      * 测试日期终止
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")
     private Date endTestDate;
 
     /**
@@ -174,6 +183,8 @@ public class UlElectronicWire implements Serializable {
     /**
      * 创建时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")
     private Date createTime;
 
     /**
@@ -555,6 +566,12 @@ public class UlElectronicWire implements Serializable {
      * 热延伸率/g
      */
     private Double thermalElongation;
+
+    /**
+     * 线类型
+     */
+    private String wireType;
+
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
