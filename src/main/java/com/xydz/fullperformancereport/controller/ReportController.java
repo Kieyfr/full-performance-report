@@ -36,16 +36,42 @@ public class ReportController {
     }
 
     /**
-     * 查询报告
+     * 查询报告列表
      *
      */
     @PostMapping("getReports")
-    @ApiOperation(value = "查询报告")
+    @ApiOperation(value = "查询报告列表")
     public ResponseData<List<Report> > getReports(){
         QueryWrapper<Report> queryWrapper = new QueryWrapper<>();
         queryWrapper.orderByDesc("CREATE_TIME");
         List<Report> reportList = reportService.list(queryWrapper);
         return new ResponseData<List<Report>>("200","生成成功",reportList);
+    }
+
+    /**
+     * 查询报告
+     *
+     */
+    @GetMapping("getReport")
+    @ApiOperation(value = "查询报告")
+    public ResponseData<ReportVo> getReport(@RequestParam("reportNo")String reportNo){
+        ReportVo reportVo = reportService.getReportVo(reportNo);
+        return new ResponseData<ReportVo>("200","生成成功",reportVo);
+    }
+
+    /**
+     * 修改报告
+     *
+     * @param reportVo
+     */
+    @PostMapping("modReport")
+    @ApiOperation(value = "修改报告")
+    public ResponseData<String> modReport(@RequestBody ReportVo reportVo){
+        boolean state = reportService.modReportVo(reportVo);
+        if (state){
+            return new ResponseData<>("200","修改成功",null);
+        }
+        return new ResponseData<>("500","修改失败",null);
     }
 
     /**

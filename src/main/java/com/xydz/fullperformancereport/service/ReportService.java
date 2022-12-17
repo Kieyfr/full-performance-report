@@ -20,6 +20,22 @@ public interface ReportService extends IService<Report> {
     boolean saveReportVo(ReportVo reportVo);
 
     /**
+     * 查询一个报告
+     *
+     * @param reportNo
+     * @return boolean
+     */
+    ReportVo getReportVo(String reportNo);
+
+    /**
+     * 修改一个报告
+     *
+     * @param reportVo
+     * @return boolean
+     */
+    boolean modReportVo(ReportVo reportVo);
+
+    /**
      * 删除一个报告
      *
      * @param reportNo

@@ -29,6 +29,194 @@
         INSUL_AGING_ELONGATION_TD5,INSUL_AGING_ELONGATION_TD6,INSUL_AGING_PULL_TD1,
         INSUL_AGING_PULL_TD2,INSUL_AGING_PULL_TD3,INSUL_AGING_PULL_TD4,
         INSUL_AGING_PULL_TD5,INSUL_AGING_PULL_TD6,HTG_FRONT_AVG_DIAMETER,
-        HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD
+        HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD,CONDUCTOR20_DCR_TD
     </sql>
+    <delete id="deleteListAllByReportNoAndId">
+        delete
+        from FPR_WIRE
+        where REPORT_NO = #{reportNo,jdbcType=VARCHAR} AND ID IN
+        <foreach collection="wireList" item="item" separator="," open="(" close=")">
+            #{item.id}
+        </foreach>
+    </delete>
+    <update id="updateAllByReportNoAndId">
+        update FPR_WIRE
+        <set>
+            <if test="num!=null and num!=''">
+                NUM = #{num},
+            </if>
+            <if test="color!=null and color!=''">
+                COLOR = #{color},
+            </if>
+            <if test="diameterTd1!=null and diameterTd1!=''">
+                DIAMETER_TD1 = #{diameterTd1},
+            </if>
+            <if test="diameterTd2!=null and diameterTd2!=''">
+                DIAMETER_TD2 = #{diameterTd2},
+            </if>
+            <if test="diameterTd3!=null and diameterTd3!=''">
+                DIAMETER_TD3 = #{diameterTd3},
+            </if>
+            <if test="diameterTd4!=null and diameterTd4!=''">
+                DIAMETER_TD4 = #{diameterTd4},
+            </if>
+            <if test="diameterTd5!=null and diameterTd5!=''">
+                DIAMETER_TD5 = #{diameterTd5},
+            </if>
+            <if test="diameterTd6!=null and diameterTd6!=''">
+                DIAMETER_TD6 = #{diameterTd6},
+            </if>
+            <if test="insulOdTd1!=null and insulOdTd1!=''">
+                INSUL_OD_TD1 = #{insulOdTd1},
+            </if>
+            <if test="insulOdTd2!=null and insulOdTd2!=''">
+                INSUL_OD_TD2 = #{insulOdTd2},
+            </if>
+            <if test="insulOdTd3!=null and insulOdTd3!=''">
+                INSUL_OD_TD3 = #{insulOdTd3},
+            </if>
+            <if test="insulOdTd4!=null and insulOdTd4!=''">
+                INSUL_OD_TD4 = #{insulOdTd4},
+            </if>
+            <if test="insulOdTd5!=null and insulOdTd5!=''">
+                INSUL_OD_TD5 = #{insulOdTd5},
+            </if>
+            <if test="insulOdTd6!=null and insulOdTd6!=''">
+                INSUL_OD_TD6 = #{insulOdTd6},
+            </if>
+            <if test="insulThkTd1!=null and insulThkTd1!=''">
+                INSUL_THK_TD1 = #{insulThkTd1},
+            </if>
+            <if test="insulThkTd2!=null and insulThkTd2!=''">
+                INSUL_THK_TD2 = #{insulThkTd2},
+            </if>
+            <if test="insulThkTd3!=null and insulThkTd3!=''">
+                INSUL_THK_TD3 = #{insulThkTd3},
+            </if>
+            <if test="insulThkTd4!=null and insulThkTd4!=''">
+                INSUL_THK_TD4 = #{insulThkTd4},
+            </if>
+            <if test="insulThkTd5!=null and insulThkTd5!=''">
+                INSUL_THK_TD5 = #{insulThkTd5},
+            </if>
+            <if test="insulThkTd6!=null and insulThkTd6!=''">
+                INSUL_THK_TD6 = #{insulThkTd6},
+            </if>
+            <if test="insulThkTd7!=null and insulThkTd7!=''">
+                INSUL_THK_TD7 = #{insulThkTd7},
+            </if>
+            <if test="insulThkTd8!=null and insulThkTd8!=''">
+                INSUL_THK_TD8 = #{insulThkTd8},
+            </if>
+            <if test="insulThkTd9!=null and insulThkTd9!=''">
+                INSUL_THK_TD9 = #{insulThkTd9},
+            </if>
+            <if test="insulThkTd10!=null and insulThkTd10!=''">
+                INSUL_THK_TD10 = #{insulThkTd10},
+            </if>
+            <if test="insulUnagedElongationTd1!=null and insulUnagedElongationTd1!=''">
+                INSUL_UNAGED_ELONGATION_TD1 = #{insulUnagedElongationTd1},
+            </if>
+            <if test="insulUnagedElongationTd2!=null and insulUnagedElongationTd2!=''">
+                INSUL_UNAGED_ELONGATION_TD2 = #{insulUnagedElongationTd2},
+            </if>
+            <if test="insulUnagedElongationTd3!=null and insulUnagedElongationTd3!=''">
+                INSUL_UNAGED_ELONGATION_TD3 = #{insulUnagedElongationTd3},
+            </if>
+            <if test="insulUnagedElongationTd4!=null and insulUnagedElongationTd4!=''">
+                INSUL_UNAGED_ELONGATION_TD4 = #{insulUnagedElongationTd4},
+            </if>
+            <if test="insulUnagedElongationTd5!=null and insulUnagedElongationTd5!=''">
+                INSUL_UNAGED_ELONGATION_TD5 = #{insulUnagedElongationTd5},
+            </if>
+            <if test="insulUnagedElongationTd6!=null and insulUnagedElongationTd6!=''">
+                INSUL_UNAGED_ELONGATION_TD6 = #{insulUnagedElongationTd6},
+            </if>
+            <if test="insulUnagedPullTd1!=null and insulUnagedPullTd1!=''">
+                INSUL_UNAGED_PULL_TD1 = #{insulUnagedPullTd1},
+            </if>
+            <if test="insulUnagedPullTd2!=null and insulUnagedPullTd2!=''">
+                INSUL_UNAGED_PULL_TD2 = #{insulUnagedPullTd2},
+            </if>
+            <if test="insulUnagedPullTd3!=null and insulUnagedPullTd3!=''">
+                INSUL_UNAGED_PULL_TD3 = #{insulUnagedPullTd3},
+            </if>
+            <if test="insulUnagedPullTd4!=null and insulUnagedPullTd4!=''">
+                INSUL_UNAGED_PULL_TD4 = #{insulUnagedPullTd4},
+            </if>
+            <if test="insulUnagedPullTd5!=null and insulUnagedPullTd5!=''">
+                INSUL_UNAGED_PULL_TD5 = #{insulUnagedPullTd5},
+            </if>
+            <if test="insulUnagedPullTd6!=null and insulUnagedPullTd6!=''">
+                INSUL_UNAGED_PULL_TD6 = #{insulUnagedPullTd6},
+            </if>
+            <if test="insulAgingElongationTd1!=null and insulAgingElongationTd1!=''">
+                INSUL_AGING_ELONGATION_TD1 = #{insulAgingElongationTd1},
+            </if>
+            <if test="insulAgingElongationTd2!=null and insulAgingElongationTd2!=''">
+                INSUL_AGING_ELONGATION_TD2 = #{insulAgingElongationTd2},
+            </if>
+            <if test="insulAgingElongationTd3!=null and insulAgingElongationTd3!=''">
+                INSUL_AGING_ELONGATION_TD3 = #{insulAgingElongationTd3},
+            </if>
+            <if test="insulAgingElongationTd4!=null and insulAgingElongationTd4!=''">
+                INSUL_AGING_ELONGATION_TD4 = #{insulAgingElongationTd4},
+            </if>
+            <if test="insulAgingElongationTd5!=null and insulAgingElongationTd5!=''">
+                INSUL_AGING_ELONGATION_TD5 = #{insulAgingElongationTd5},
+            </if>
+            <if test="insulAgingElongationTd6!=null and insulAgingElongationTd6!=''">
+                INSUL_AGING_ELONGATION_TD6 = #{insulAgingElongationTd6},
+            </if>
+            <if test="insulAgingPullTd1!=null and insulAgingPullTd1!=''">
+                INSUL_AGING_PULL_TD1 = #{insulAgingPullTd1},
+            </if>
+            <if test="insulAgingPullTd2!=null and insulAgingPullTd2!=''">
+                INSUL_AGING_PULL_TD2 = #{insulAgingPullTd2},
+            </if>
+            <if test="insulAgingPullTd3!=null and insulAgingPullTd3!=''">
+                INSUL_AGING_PULL_TD3 = #{insulAgingPullTd3},
+            </if>
+            <if test="insulAgingPullTd4!=null and insulAgingPullTd4!=''">
+                INSUL_AGING_PULL_TD4 = #{insulAgingPullTd4},
+            </if>
+            <if test="insulAgingPullTd5!=null and insulAgingPullTd5!=''">
+                INSUL_AGING_PULL_TD5 = #{insulAgingPullTd5},
+            </if>
+            <if test="insulAgingPullTd6!=null and insulAgingPullTd6!=''">
+                INSUL_AGING_PULL_TD6 = #{insulAgingPullTd6},
+            </if>
+            <if test="htgFrontAvgDiameter!=null and htgFrontAvgDiameter!=''">
+                HTG_FRONT_AVG_DIAMETER = #{htgFrontAvgDiameter},
+            </if>
+            <if test="htgRearAvgDiameter!=null and htgRearAvgDiameter!=''">
+                HTG_REAR_AVG_DIAMETER = #{htgRearAvgDiameter},
+            </if>
+            <if test="irLength!=null and irLength!=''">
+                IR_LENGTH = #{irLength},
+            </if>
+            <if test="irTd!=null and irTd!=''">
+                IR_TD = #{irTd},
+            </if>
+            <if test="conductor20DcrTd!=null and conductor20DcrTd!=''">
+                CONDUCTOR20_DCR_TD = #{conductor20DcrTd}
+            </if>
+            <if test="num!=null and num!=''">
+
+            </if>
+        </set>
+        WHERE REPORT_NO = #{reportNo} AND ID = #{id}
+    </update>
+    <delete id="deleteByReportNo">
+        delete
+        from FPR_WIRE
+        where REPORT_NO = #{reportNo,jdbcType=VARCHAR}
+    </delete>
+    <select id="selectAllByReportNo" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from FPR_WIRE
+        where
+        REPORT_NO = #{reportNo,jdbcType=VARCHAR}
+    </select>
 </mapper>

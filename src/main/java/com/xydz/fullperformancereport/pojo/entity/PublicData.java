@@ -81,6 +81,26 @@ public class PublicData implements Serializable {
     private Double sheathThkTd6;
 
     /**
+     * 护套厚度测试数据7
+     */
+    private Double sheathThkTd7;
+
+    /**
+     * 护套厚度测试数据8
+     */
+    private Double sheathThkTd8;
+
+    /**
+     * 护套厚度测试数据9
+     */
+    private Double sheathThkTd9;
+
+    /**
+     * 护套厚度测试数据10
+     */
+    private Double sheathThkTd10;
+
+    /**
      * 护套老化前伸长测试数据1
      */
     private Double sheathUnagedElongationTd1;

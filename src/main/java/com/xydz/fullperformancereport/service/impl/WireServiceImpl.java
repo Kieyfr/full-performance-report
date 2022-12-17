@@ -5,6 +5,10 @@ import com.xydz.fullperformancereport.pojo.entity.Wire;
 import com.xydz.fullperformancereport.service.WireService;
 import com.xydz.fullperformancereport.mapper.WireMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
 * @author ThinkPad
@@ -15,6 +19,36 @@ import org.springframework.stereotype.Service;
 public class WireServiceImpl extends ServiceImpl<WireMapper, Wire>
     implements WireService{
 
+    @Resource
+    private WireMapper wireMapper;
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public boolean deleteListAllByReportNoAndId(List<Wire> wireList,String reportNo) {
+        wireMapper.deleteListAllByReportNoAndId(wireList,reportNo);
+        return true;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public boolean updateListAllByReportNoAndId(List<Wire> wireList) {
+        for (Wire wire:wireList){
+            wireMapper.updateAllByReportNoAndId(wire);
+        }
+        return true;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public List<Wire> selectAllByReportNo(String reportNo) {
+        return wireMapper.selectAllByReportNo(reportNo);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public int deleteByReportNo(String reportNo) {
+        return wireMapper.deleteByReportNo(reportNo);
+    }
 }
 
 
