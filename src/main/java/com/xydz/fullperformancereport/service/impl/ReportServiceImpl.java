@@ -13,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
 * @author ThinkPad
@@ -56,11 +58,55 @@ public class ReportServiceImpl extends ServiceImpl<ReportMapper, Report>
         return true;
     }
 
+    @Override
+    public ReportVo getReportVo(String reportNo) {
+        Report report = getById(reportNo);
+        List<String> reportNos = new ArrayList<>();
+        reportNos.add(reportNo);
+        List<Wire> wires = wireService.selectAllByReportNo(reportNo);
+        PublicData publicData = publicDataService.getById(reportNo);
+        Visible visible = visibleService.getById(reportNo);
+        ReportVo reportVo = new ReportVo();
+        reportVo.setReport(report);
+        reportVo.setWireList(wires);
+        reportVo.setPublicData(publicData);
+        reportVo.setVisible(visible);
+        return reportVo;
+    }
+
+    @Override
+    public boolean modReportVo(ReportVo reportVo) {
+        Report report = reportVo.getReport();
+        List<Wire> newWireList = reportVo.getWireList();
+        PublicData publicData = reportVo.getPublicData();
+        Visible visible = reportVo.getVisible();
+        User user = LoginUtil.getLoginUser();
+        report.setCreateUserId(user.getUserId());
+        report.setCreateUserName(user.getUserName());
+        updateById(report);
+        String reportNo = report.getReportNo();
+        List<Wire> oldWireList = wireService.selectAllByReportNo(reportNo);
+        if (oldWireList.size()>newWireList.size()){
+            List<Wire> delWireList = oldWireList.stream().filter(wire -> newWireList.indexOf(wire) == -1).collect(Collectors.toList());
+            wireService.deleteListAllByReportNoAndId(delWireList ,reportNo);
+        }else {
+            List<Wire> addWireList = newWireList.stream().filter(wire -> oldWireList.indexOf(wire) == -1).collect(Collectors.toList());
+            for (Wire wire : addWireList){
+                wire.setReportNo(reportNo);
+            }
+            wireService.saveBatch(addWireList, addWireList.size());
+        }
+        wireService.updateListAllByReportNoAndId(newWireList);
+        publicDataService.updateById(publicData);
+        visibleService.updateById(visible);
+        return true;
+    }
+
     @Transactional(rollbackFor = Exception.class)
     @Override
     public boolean delReportVo(String reportNo) {
         removeById(reportNo);
-        wireService.removeById(reportNo);
+        wireService.deleteByReportNo(reportNo);
         publicDataService.removeById(reportNo);
         visibleService.removeById(reportNo);
         return true;

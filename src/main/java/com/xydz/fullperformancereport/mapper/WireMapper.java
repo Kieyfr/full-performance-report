@@ -1,7 +1,9 @@
 package com.xydz.fullperformancereport.mapper;
+import java.util.List;
 
 import com.xydz.fullperformancereport.pojo.entity.Wire;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author ThinkPad
@@ -10,6 +12,14 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.xydz.fullperformancereport.pojo.entity.Wire
 */
 public interface WireMapper extends BaseMapper<Wire> {
+
+    int deleteListAllByReportNoAndId(@Param("wireList")List<Wire> wireList,@Param("reportNo")String reportNo);
+
+    int updateAllByReportNoAndId(Wire wire);
+
+    List<Wire> selectAllByReportNo(@Param("reportNo") String reportNo);
+
+    int deleteByReportNo(@Param("reportNo") String reportNo);
 
 }
 
