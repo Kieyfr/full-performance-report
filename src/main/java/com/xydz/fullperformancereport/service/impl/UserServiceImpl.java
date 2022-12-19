@@ -6,6 +6,9 @@ import com.xydz.fullperformancereport.service.UserService;
 import com.xydz.fullperformancereport.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
 * @author ThinkPad
 * @description 针对表【FPR_USER(全性能报告表用户表)】的数据库操作Service实现
@@ -14,6 +17,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService{
+
+    @Resource
+    private UserMapper userMapper;
+    @Override
+    public List<User> selectAllByUserIdAndUserNameAndUserPermissions(String userId, String userName, Integer userPermissions) {
+        return userMapper.selectAllByUserIdAndUserNameAndUserPermissions(userId,userName,userPermissions);
+    }
+
+    @Override
+    public int insertSelective(User user) {
+        return userMapper.insertSelective(user);
+    }
+
+    @Override
+    public int updateUserPermissionsByUserId(Integer userPermissions, String userId) {
+        return userMapper.updateUserPermissionsByUserId(userPermissions,userId);
+    }
+
+    @Override
+    public int delByUserId(String userId) {
+        return userMapper.delByUserId(userId);
+    }
+
+    @Override
+    public int updateUserPasswordByUserId(String userPassword, String userId) {
+        return userMapper.updateUserPasswordByUserId(userPassword,userId);
+    }
 
 }
 
