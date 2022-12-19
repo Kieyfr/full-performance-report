@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 /**
 * @author ThinkPad
-* @description 针对表【FPR_PUBLIC_DATA(公共数据表)】的数据库操作Service实现
-* @createDate 2022-12-12 10:46:52
+* @description 针对表【FPR_PUBLIC_DATA(全性能报告表公共数据表)】的数据库操作Service实现
+* @createDate 2022-12-19 08:15:09
 */
 @Service
 public class PublicDataServiceImpl extends ServiceImpl<PublicDataMapper, PublicData>

@@ -5,6 +5,7 @@
 <mapper namespace="com.xydz.fullperformancereport.mapper.VisibleMapper">
 
     <resultMap id="BaseResultMap" type="com.xydz.fullperformancereport.pojo.entity.Visible">
+            <result property="reportNo" column="REPORT_NO" jdbcType="VARCHAR"/>
             <result property="isColor" column="IS_COLOR" jdbcType="DECIMAL"/>
             <result property="isNum" column="IS_NUM" jdbcType="DECIMAL"/>
             <result property="isDiameter" column="IS_DIAMETER" jdbcType="DECIMAL"/>
@@ -52,7 +53,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        IS_COLOR,IS_NUM,IS_DIAMETER,
+        REPORT_NO,IS_COLOR,IS_NUM,IS_DIAMETER,
         IS_CSA,IS_INSUL_OD,IS_INSUL_THK_AVG,
         IS_INSUL_THK_MIN,IS_SHEATH_OD,IS_SHEATH_THK_AVG,
         IS_SHEATH_THK_MIN,IS_INSUL_BI_CONDITION,IS_INSUL_UNAGED_EI,

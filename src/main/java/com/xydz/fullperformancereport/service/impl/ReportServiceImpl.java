@@ -86,17 +86,40 @@ public class ReportServiceImpl extends ServiceImpl<ReportMapper, Report>
         updateById(report);
         String reportNo = report.getReportNo();
         List<Wire> oldWireList = wireService.selectAllByReportNo(reportNo);
-        if (oldWireList.size()>newWireList.size()){
-            List<Wire> delWireList = oldWireList.stream().filter(wire -> newWireList.indexOf(wire) == -1).collect(Collectors.toList());
-            wireService.deleteListAllByReportNoAndId(delWireList ,reportNo);
-        }else {
-            List<Wire> addWireList = newWireList.stream().filter(wire -> oldWireList.indexOf(wire) == -1).collect(Collectors.toList());
-            for (Wire wire : addWireList){
+        if (oldWireList.size()<newWireList.size()) {
+            List<Wire> updateWireList = new ArrayList<Wire>();
+            for (Wire wire:newWireList){
+                Long wireId = wire.getId();
+                for (Wire oldWire:oldWireList){
+                    Long oldWireId = oldWire.getId();
+                    if (oldWireId.equals(wireId)){
+                        updateWireList.add(wire);
+                    }
+                }
+            }
+            List<Wire> insertWireList = newWireList.stream().filter(wire -> updateWireList.indexOf(wire) == -1).collect(Collectors.toList());
+            wireService.updateListAllByReportNoAndId(updateWireList);
+            for (Wire wire : insertWireList){
                 wire.setReportNo(reportNo);
             }
-            wireService.saveBatch(addWireList, addWireList.size());
+            wireService.saveBatch(insertWireList, insertWireList.size());
+        }else if(oldWireList.size()==newWireList.size()){
+            wireService.updateListAllByReportNoAndId(newWireList);
+        }else {
+            List<Wire> updateWireList = new ArrayList<Wire>();
+            for (Wire wire:newWireList){
+                Long wireId = wire.getId();
+                for (Wire oldWire:oldWireList){
+                    Long oldWireId = oldWire.getId();
+                    if (oldWireId.equals(wireId)){
+                        updateWireList.add(wire);
+                    }
+                }
+            }
+            List<Wire> deleteWireList = oldWireList.stream().filter(wire -> updateWireList.indexOf(wire) == -1).collect(Collectors.toList());
+            wireService.updateListAllByReportNoAndId(updateWireList);
+            wireService.deleteListAllByReportNoAndId(deleteWireList ,reportNo);
         }
-        wireService.updateListAllByReportNoAndId(newWireList);
         publicDataService.updateById(publicData);
         visibleService.updateById(visible);
         return true;

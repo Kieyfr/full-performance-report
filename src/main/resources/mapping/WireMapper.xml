@@ -199,11 +199,9 @@
                 IR_TD = #{irTd},
             </if>
             <if test="conductor20DcrTd!=null and conductor20DcrTd!=''">
-                CONDUCTOR20_DCR_TD = #{conductor20DcrTd}
+                CONDUCTOR20_DCR_TD = #{conductor20DcrTd},
             </if>
-            <if test="num!=null and num!=''">
-
-            </if>
+            ID = #{id}
         </set>
         WHERE REPORT_NO = #{reportNo} AND ID = #{id}
     </update>
@@ -218,5 +216,6 @@
         from FPR_WIRE
         where
         REPORT_NO = #{reportNo,jdbcType=VARCHAR}
+        ORDER BY ID
     </select>
 </mapper>

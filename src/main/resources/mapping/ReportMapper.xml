@@ -40,6 +40,7 @@
             <result property="createUserId" column="CREATE_USER_ID" jdbcType="VARCHAR"/>
             <result property="createUserName" column="CREATE_USER_NAME" jdbcType="VARCHAR"/>
             <result property="description" column="DESCRIPTION" jdbcType="VARCHAR"/>
+            <result property="wireType" column="WIRE_TYPE" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -79,6 +80,6 @@
         FIFTH_FLAME_RETARDING_TD3,FLAG_BURNING_AREA_TD1,FLAG_BURNING_AREA_TD2,
         FLAG_BURNING_AREA_TD3,BURNING_AFTER_LENGHT_TD1,BURNING_AFTER_LENGHT_TD2,
         BURNING_AFTER_LENGHT_TD3,BURNING_TIME_TD1,BURNING_TIME_TD2,
-        BURNING_TIME_TD3,THERMAL_ELONGATION
+        BURNING_TIME_TD3,THERMAL_ELONGATION,WIRE_TYPE
     </sql>
 </mapper>
