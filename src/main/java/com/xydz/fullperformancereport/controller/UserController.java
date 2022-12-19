@@ -1,7 +1,7 @@
 package com.xydz.fullperformancereport.controller;
 
 import cn.hutool.crypto.SecureUtil;
-import com.xydz.fullperformancereport.pojo.entity.Permissions;
+import com.xydz.fullperformancereport.pojo.entity.UpdateUser;
 import com.xydz.fullperformancereport.pojo.entity.User;
 import com.xydz.fullperformancereport.pojo.resp.ResponseData;
 import com.xydz.fullperformancereport.service.UserService;
@@ -9,7 +9,6 @@ import com.xydz.fullperformancereport.util.JwtUtil;
 import com.xydz.fullperformancereport.util.LoginUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -106,11 +105,11 @@ public class UserController {
      * @return null
      */
     @PostMapping("modPermissions")
-    public ResponseData<String> modPermissions(@RequestBody Permissions permissions){
+    public ResponseData<String> modPermissions(@RequestBody UpdateUser updateUser){
 
         User user=LoginUtil.getLoginUser();
-        if (permissions.getOldPermissions()<user.getUserPermissions()&&permissions.getNewPermissions()<user.getUserPermissions()){
-            int i = userService.updateUserPermissionsByUserId(permissions.getNewPermissions(), permissions.getUserId());
+        if (updateUser.getOldPermissions()<user.getUserPermissions()&&updateUser.getNewPermissions()<user.getUserPermissions()){
+            int i = userService.updateUserPermissionsByUserId(updateUser.getNewPermissions(), updateUser.getUserId());
             if (i>0){
                 return new ResponseData<>("200","更改成功",null);
             }else {
@@ -146,7 +145,7 @@ public class UserController {
     /**
      * 重置密码
      *
-     * @param userId
+     * @param user
      * @return null
      */
     @PostMapping("resetUserPassword")
@@ -164,6 +163,34 @@ public class UserController {
         }else{
             return new ResponseData<>("402","权限不足",null);
         }
+    }
+
+    /**
+     * 更改目前登录账号密码
+     *
+     * @param updateUser
+     * @return null
+     */
+    @PostMapping("updateUserPassword")
+    public ResponseData<String> updateUserPassword(@RequestBody UpdateUser updateUser){
+
+        User Loginuser=LoginUtil.getLoginUser();
+        if (updateUser.getUserId().equals(Loginuser.getUserId())){
+            if (Loginuser.getUserPassword().equals(SecureUtil.md5(updateUser.getOldPassword()))){
+                updateUser.setNewPassword(SecureUtil.md5(updateUser.getNewPassword()));
+                int i = userService.updateUserPasswordByUserId(updateUser.getNewPassword(), updateUser.getUserId());
+                if (i>0){
+                    return new ResponseData<>("200","更改成功",null);
+                }else{
+                    return new ResponseData<>("401","信息有误",null);
+                }
+            }else{
+                return new ResponseData<>("401","原密码错误",null);
+            }
+        }else{
+            return new ResponseData<>("402","更改的账号与登录的不相符",null);
+        }
+
     }
 
 

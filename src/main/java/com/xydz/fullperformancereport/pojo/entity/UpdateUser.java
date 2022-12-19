@@ -1,10 +1,9 @@
 package com.xydz.fullperformancereport.pojo.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data
-public class Permissions {
+public class UpdateUser {
 
     private String userId;
 
@@ -13,6 +12,10 @@ public class Permissions {
      */
 
     private String userName;
+
+    private String oldPassword;
+
+    private String newPassword;
 
     private Integer oldPermissions;
 
