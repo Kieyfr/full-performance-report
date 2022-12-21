@@ -42,10 +42,7 @@ public class ReportServiceImpl extends ServiceImpl<ReportMapper, Report>
         List<Wire> wireList = reportVo.getWireList();
         PublicData publicData = reportVo.getPublicData();
         Visible visible = reportVo.getVisible();
-        User user = LoginUtil.getLoginUser();
         String reportNo = report.getReportNo();
-        report.setCreateUserId(user.getUserId());
-        report.setCreateUserName(user.getUserName());
         publicData.setReportNo(reportNo);
         visible.setReportNo(reportNo);
         for (Wire wire : wireList){

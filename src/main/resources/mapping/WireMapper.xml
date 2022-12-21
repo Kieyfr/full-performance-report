@@ -29,7 +29,8 @@
         INSUL_AGING_ELONGATION_TD5,INSUL_AGING_ELONGATION_TD6,INSUL_AGING_PULL_TD1,
         INSUL_AGING_PULL_TD2,INSUL_AGING_PULL_TD3,INSUL_AGING_PULL_TD4,
         INSUL_AGING_PULL_TD5,INSUL_AGING_PULL_TD6,HTG_FRONT_AVG_DIAMETER,
-        HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD,CONDUCTOR20_DCR_TD
+        HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD,CONDUCTOR20_DCR_TD,MATERIAL_QUALITY,
+        INSUL_MATERIAL_QUALITY,FIRTY807_UNAGED,SECOND807_AGING,INSUL_HTHP
     </sql>
     <delete id="deleteListAllByReportNoAndId">
         delete
@@ -200,6 +201,21 @@
             </if>
             <if test="conductor20DcrTd!=null and conductor20DcrTd!=''">
                 CONDUCTOR20_DCR_TD = #{conductor20DcrTd},
+            </if>
+            <if test="materialQuality!=null and materialQuality!=''">
+                MATERIAL_QUALITY = #{materialQuality},
+            </if>
+            <if test="insulMaterialQuality!=null and insulMaterialQuality!=''">
+                INSUL_MATERIAL_QUALITY = #{insulMaterialQuality},
+            </if>
+            <if test="firty807Unaged!=null and firty807Unaged!=''">
+                FIRTY807_UNAGED = #{firty807Unaged},
+            </if>
+            <if test="second807Aging!=null and second807Aging!=''">
+                SECOND807_AGING = #{second807Aging},
+            </if>
+            <if test="insulHthp!=null and insulHthp!=''">
+                INSUL_HTHP = #{insulHthp},
             </if>
             ID = #{id}
         </set>

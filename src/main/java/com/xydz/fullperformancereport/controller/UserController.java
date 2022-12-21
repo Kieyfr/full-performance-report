@@ -101,7 +101,7 @@ public class UserController {
     /**
      * 修改权限
      *
-     * @param userId,userName,oldPermissions,newPermissions
+     * @param updateUser
      * @return null
      */
     @PostMapping("modPermissions")
@@ -123,12 +123,11 @@ public class UserController {
     /**
      * 删除用户
      *
-     * @param userId
+     * @param user
      * @return null
      */
     @PostMapping("delUser")
     public ResponseData<String> delUser(@RequestBody User user){
-
         User Loginuser=LoginUtil.getLoginUser();
         if (user.getUserPermissions()<Loginuser.getUserPermissions()){
             int i = userService.delByUserId(user.getUserId());

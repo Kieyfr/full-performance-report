@@ -14,13 +14,6 @@ import lombok.Data;
 @TableName(value ="FPR_VISIBLE")
 @Data
 public class Visible implements Serializable {
-
-    /**
-     * 报告编号
-     */
-    @TableId
-    private String reportNo;
-
     /**
      * 绝缘颜色是否可见
      */
@@ -37,7 +30,7 @@ public class Visible implements Serializable {
     private Boolean isDiameter;
 
     /**
-     * 导体截面积是否可见
+     * 导体截面积是否可见||截面规格是否可见
      */
     private Boolean isCsa;
 
@@ -87,12 +80,12 @@ public class Visible implements Serializable {
     private Boolean isInsulUnagedTs;
 
     /**
-     * 绝缘老化后延伸残率是否可见
+     * 绝缘老化后延伸残率是否可见||绝缘老化延伸变化率是否可见
      */
     private Boolean isInsulAgingEi;
 
     /**
-     * 绝缘老化后抗张残率是否可见
+     * 绝缘老化后抗张残率是否可见||绝缘老化抗张变化率是否可见
      */
     private Boolean isInsulAgingTs;
 
@@ -112,12 +105,12 @@ public class Visible implements Serializable {
     private Boolean isSheathUnagedTs;
 
     /**
-     * 护套老化后延伸残率是否可见
+     * 护套老化后延伸残率是否可见||护套老化延伸变化率是否可见
      */
     private Boolean isSheathAgingEi;
 
     /**
-     * 护套老化后抗张残率是否可见
+     * 护套老化后抗张残率是否可见||护套老化抗张变化率是否可见
      */
     private Boolean isSheathAgingTs;
 
@@ -182,64 +175,135 @@ public class Visible implements Serializable {
     private Boolean isHvdcWirePok;
 
     /**
-     * VW-1第1次施火延燃是否可见
+     * VW-1是否可见
      */
-    private Boolean isFirstFlameRetarding;
+    private Boolean isVw1;
 
     /**
-     * VW-1第2次施火延燃是否可见
+     * FT2是否可见
      */
-    private Boolean isSecondFlameRetarding;
+    private Boolean isFt2;
 
     /**
-     * VW-1第3次施火延燃是否可见
+     * UL水平燃烧是否可见
      */
-    private Boolean isThirdFlameRetarding;
-
-    /**
-     * VW-1第4次施火延燃是否可见
-     */
-    private Boolean isFourthFlameRetarding;
-
-    /**
-     * VW-1第5次施火延燃是否可见
-     */
-    private Boolean isFifthFlameRetarding;
-
-    /**
-     * VW-1旗子烧毁面积是否可见
-     */
-    private Boolean isFlagBurningArea;
-
-    /**
-     * VW-1棉花是否点燃是否可见
-     */
-    private Boolean isLightCottonVw1;
-
-    /**
-     * FT2施火30秒后燃烧长度是否可见
-     */
-    private Boolean isBurningAfterLenght;
-
-    /**
-     * FT2棉花是否点燃是否可见
-     */
-    private Boolean isLightCottonFt2;
-
-    /**
-     * UL水平燃烧时间是否可见
-     */
-    private Boolean isBurningTime;
-
-    /**
-     * UL水平燃烧棉花是否点燃是否可见
-     */
-    private Boolean isLightCottonUl;
+    private Boolean isUlHorizontalBurning;
 
     /**
      * 热延伸率是否可见
      */
     private Boolean isThermalElongation;
+
+    /**
+     * 报告编号
+     */
+    @TableId
+    private String reportNo;
+
+    /**
+     * 导体材质是否可见
+     */
+    private Boolean isMaterialQuality;
+
+    /**
+     * 绝缘材质是否可见
+     */
+    private Boolean isInsulMaterialQuality;
+
+    /**
+     * 护套材质是否可见
+     */
+    private Boolean isSheathMaterialQuality;
+
+    /**
+     * 椭圆度是否可见
+     */
+    private Boolean isEllipticity;
+
+    /**
+     * 绝缘延伸率中间值是否可见
+     */
+    private Boolean isInsulUnagedEiMvs;
+
+    /**
+     * 绝缘抗张中间值是否可见
+     */
+    private Boolean isInsulUnagedTsMvs;
+
+    /**
+     * 绝缘老化后延伸率中间值是否可见
+     */
+    private Boolean isInsulAgingEiMvs;
+
+    /**
+     * 绝缘老化后抗张中间值是否可见
+     */
+    private Boolean isInsulAgingTsMvs;
+
+    /**
+     * 护套延伸率中间值是否可见
+     */
+    private Boolean isSheathUnagedEiMvs;
+
+    /**
+     * 护套抗张中间值是否可见
+     */
+    private Boolean isSheathUnagedTsMvs;
+
+    /**
+     * 护套老化后延伸率中间值是否可见
+     */
+    private Boolean isSheathAgingEiMvs;
+
+    /**
+     * 护套老化后抗张中间值是否可见
+     */
+    private Boolean isSheathAgingTsMvs;
+
+    /**
+     * 失重是否可见
+     */
+    private Boolean isWl;
+
+    /**
+     * 低温冲击是否可见
+     */
+    private Boolean isLowTemperatureImpact;
+
+    /**
+     * 高温压力是否可见
+     */
+    private Boolean isHthp;
+
+    /**
+     * 热稳定性是否可见
+     */
+    private Boolean isThermalStability;
+
+    /**
+     * 曲挠试验是否可见
+     */
+    private Boolean isFlexureTest;
+
+    /**
+     * 印字间距是否可见
+     */
+    private Boolean isPrintingSpace;
+
+    /**
+     * 90℃绝缘电阻是否可见
+     */
+    private Boolean isIr90Calc;
+
+    /**
+     * 耐电压测试是否可见
+     */
+    private Boolean isDielectricPok;
+
+    /**
+     * GB/T 18380.12-2008单根电线垂直蔓延燃烧试验是否可见
+     */
+    private Boolean isGbTbfStartDistance;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

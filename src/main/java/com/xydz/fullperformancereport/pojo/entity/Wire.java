@@ -275,7 +275,7 @@ public class Wire implements Serializable {
     private Double htgRearAvgDiameter;
 
     /**
-     * 20℃导体直流电阻判断值
+     * 20℃导体直流电阻测试数据
      */
     private Double conductor20DcrTd;
 
@@ -288,6 +288,31 @@ public class Wire implements Serializable {
      * 绝缘电阻测试数据
      */
     private Double irTd;
+
+    /**
+     * 导体材质
+     */
+    private String materialQuality;
+
+    /**
+     * 绝缘材质
+     */
+    private String insulMaterialQuality;
+
+    /**
+     * 80℃*7天 第一次(老化前)g
+     */
+    private Double firty807Unaged;
+
+    /**
+     * 80℃*7天 第二次(老化后)g
+     */
+    private Double second807Aging;
+
+    /**
+     * 高温压力
+     */
+    private Double insulHthp;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
