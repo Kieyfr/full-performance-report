@@ -935,6 +935,51 @@ public class PublicData implements Serializable {
      */
     private Double gbTbfBurningDistance;
 
+    /**
+     * 护套厚度测试数据11
+     */
+    private Double sheathThkTd11;
+
+    /**
+     * 护套厚度测试数据12
+     */
+    private Double sheathThkTd12;
+
+    /**
+     * 护套厚度测试数据13
+     */
+    private Double sheathThkTd13;
+
+    /**
+     * 护套厚度测试数据14
+     */
+    private Double sheathThkTd14;
+
+    /**
+     * 护套厚度测试数据15
+     */
+    private Double sheathThkTd15;
+
+    /**
+     * 护套厚度测试数据16
+     */
+    private Double sheathThkTd16;
+
+    /**
+     * 护套厚度测试数据17
+     */
+    private Double sheathThkTd17;
+
+    /**
+     * 护套厚度测试数据18
+     */
+    private Double sheathThkTd18;
+
+    /**
+     * 比长L空重
+     */
+    private Double spgLengthEmptyWeight;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

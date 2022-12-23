@@ -30,7 +30,9 @@
         INSUL_AGING_PULL_TD2,INSUL_AGING_PULL_TD3,INSUL_AGING_PULL_TD4,
         INSUL_AGING_PULL_TD5,INSUL_AGING_PULL_TD6,HTG_FRONT_AVG_DIAMETER,
         HTG_REAR_AVG_DIAMETER,IR_LENGTH,IR_TD,CONDUCTOR20_DCR_TD,MATERIAL_QUALITY,
-        INSUL_MATERIAL_QUALITY,FIRTY807_UNAGED,SECOND807_AGING,INSUL_HTHP
+        INSUL_MATERIAL_QUALITY,FIRTY807_UNAGED,SECOND807_AGING,INSUL_HTHP,
+        INSUL_THK_TD11,INSUL_THK_TD12,INSUL_THK_TD13,INSUL_THK_TD14,INSUL_THK_TD15,
+        INSUL_THK_TD16,INSUL_THK_TD17,INSUL_THK_TD18
     </sql>
     <delete id="deleteListAllByReportNoAndId">
         delete
@@ -216,6 +218,30 @@
             </if>
             <if test="insulHthp!=null and insulHthp!=''">
                 INSUL_HTHP = #{insulHthp},
+            </if>
+            <if test="insulThkTd11!=null and insulThkTd11!=''">
+                INSUL_THK_TD11 = #{insulThkTd11},
+            </if>
+            <if test="insulThkTd12!=null and insulThkTd12!=''">
+                INSUL_THK_TD12 = #{insulThkTd12},
+            </if>
+            <if test="insulThkTd13!=null and insulThkTd13!=''">
+                INSUL_THK_TD13 = #{insulThkTd13},
+            </if>
+            <if test="insulThkTd14!=null and insulThkTd14!=''">
+                INSUL_THK_TD14 = #{insulThkTd14},
+            </if>
+            <if test="insulThkTd15!=null and insulThkTd15!=''">
+                INSUL_THK_TD15 = #{insulThkTd15},
+            </if>
+            <if test="insulThkTd16!=null and insulThkTd16!=''">
+                INSUL_THK_TD16 = #{insulThkTd16},
+            </if>
+            <if test="insulThkTd17!=null and insulThkTd17!=''">
+                INSUL_THK_TD17 = #{insulThkTd17},
+            </if>
+            <if test="insulThkTd18!=null and insulThkTd18!=''">
+                INSUL_THK_TD18 = #{insulThkTd18},
             </if>
             ID = #{id}
         </set>

@@ -314,6 +314,46 @@ public class Wire implements Serializable {
      */
     private Double insulHthp;
 
+    /**
+     * 绝缘厚度测试数据11
+     */
+    private Double insulThkTd11;
+
+    /**
+     * 绝缘厚度测试数据12
+     */
+    private Double insulThkTd12;
+
+    /**
+     * 绝缘厚度测试数据13
+     */
+    private Double insulThkTd13;
+
+    /**
+     * 绝缘厚度测试数据14
+     */
+    private Double insulThkTd14;
+
+    /**
+     * 绝缘厚度测试数据15
+     */
+    private Double insulThkTd15;
+
+    /**
+     * 绝缘厚度测试数据16
+     */
+    private Double insulThkTd16;
+
+    /**
+     * 绝缘厚度测试数据17
+     */
+    private Double insulThkTd17;
+
+    /**
+     * 绝缘厚度测试数据18
+     */
+    private Double insulThkTd18;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
