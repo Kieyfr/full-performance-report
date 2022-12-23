@@ -49,6 +49,22 @@ public class ReportController {
     }
 
     /**
+     * 条件查询报告列表
+     *
+     */
+    @GetMapping("queryReports")
+    @ApiOperation(value = "查询报告列表")
+    public ResponseData<List<Report> > queryReports(@RequestParam("reportNo")String reportNo,
+                                                    @RequestParam("specification")String specification){
+        QueryWrapper<Report> queryWrapper = new QueryWrapper<>();
+        queryWrapper.like("REPORT_NO",reportNo)
+                .like("SPECIFICATION",specification)
+                .orderByDesc("CREATE_TIME");
+        List<Report> reportList = reportService.list(queryWrapper);
+        return new ResponseData<List<Report>>("200","生成成功",reportList);
+    }
+
+    /**
      * 查询报告
      *
      */
