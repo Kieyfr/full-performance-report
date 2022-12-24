@@ -28,11 +28,15 @@ public class ReportController {
     @PostMapping("saveReport")
     @ApiOperation(value = "生成报告")
     public ResponseData<String> saveReport(@RequestBody ReportVo reportVo){
-        boolean state = reportService.saveReportVo(reportVo);
-        if (state){
-            return new ResponseData<>("200","生成成功",null);
+        Report report = reportService.getById(reportVo.getReport().getReportNo());
+        if (null==report){
+            boolean state = reportService.saveReportVo(reportVo);
+            if (state){
+                return new ResponseData<>("200","生成成功",null);
+            }
+            return new ResponseData<>("500","生成失败",null);
         }
-        return new ResponseData<>("500","生成失败",null);
+        return new ResponseData<>("403","报告已存在",null);
     }
 
     /**
