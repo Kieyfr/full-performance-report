@@ -841,7 +841,7 @@ public class PublicData implements Serializable {
     private Double ir90Td;
 
     /**
-     * 绝缘电阻||70℃绝缘电阻判断值
+     * 绝缘电阻判断值||70℃绝缘电阻判断值||15℃绝缘电阻判断值
      */
     private Double irCalcDv;
 
@@ -979,6 +979,181 @@ public class PublicData implements Serializable {
      * 比长L空重
      */
     private Double spgLengthEmptyWeight;
+
+    /**
+     * 平行软线撕裂前厚度测试数据1
+     */
+    private Double parallelCordBeforeTearingTd1;
+
+    /**
+     * 平行软线撕裂前厚度测试数据2
+     */
+    private Double parallelCordBeforeTearingTd2;
+
+    /**
+     * 平行软线撕裂前厚度测试数据3
+     */
+    private Double parallelCordBeforeTearingTd3;
+
+    /**
+     * 平行软线撕裂前厚度测试数据4
+     */
+    private Double parallelCordBeforeTearingTd4;
+
+    /**
+     * 平行软线撕裂前厚度测试数据5
+     */
+    private Double parallelCordBeforeTearingTd5;
+
+    /**
+     * 平行软线撕裂前厚度测试数据6
+     */
+    private Double parallelCordBeforeTearingTd6;
+
+    /**
+     * 平行软线撕裂后厚度测试数据1
+     */
+    private Double parallelCordAfterTearingTd1;
+
+    /**
+     * 平行软线撕裂后厚度测试数据2
+     */
+    private Double parallelCordAfterTearingTd2;
+
+    /**
+     * 平行软线撕裂后厚度测试数据3
+     */
+    private Double parallelCordAfterTearingTd3;
+
+    /**
+     * 平行软线撕裂后厚度测试数据4
+     */
+    private Double parallelCordAfterTearingTd4;
+
+    /**
+     * 平行软线撕裂后厚度测试数据5
+     */
+    private Double parallelCordAfterTearingTd5;
+
+    /**
+     * 平行软线撕裂后厚度测试数据6
+     */
+    private Double parallelCordAfterTearingTd6;
+
+    /**
+     * 平行软线隔离筋厚度测试数据1
+     */
+    private Double parallelCordSpacerBarTd1;
+
+    /**
+     * 平行软线隔离筋厚度测试数据2
+     */
+    private Double parallelCordSpacerBarTd2;
+
+    /**
+     * 平行软线隔离筋厚度测试数据3
+     */
+    private Double parallelCordSpacerBarTd3;
+
+    /**
+     * 平行软线隔离筋厚度测试数据4
+     */
+    private Double parallelCordSpacerBarTd4;
+
+    /**
+     * 平行软线隔离筋厚度测试数据5
+     */
+    private Double parallelCordSpacerBarTd5;
+
+    /**
+     * 平行软线隔离筋厚度测试数据6
+     */
+    private Double parallelCordSpacerBarTd6;
+
+    /**
+     * 平行软线撕裂前厚度判断值
+     */
+    private Double parallelCordBeforeTearingDv;
+
+    /**
+     * 平行软线撕裂后厚度判断值
+     */
+    private Double parallelCordAfterTearingDv;
+
+    /**
+     * 平行软线隔离筋厚度判断值
+     */
+    private Double parallelCordSpacerBarDv;
+
+    /**
+     * 绝缘热冲击时间/h
+     */
+    private Double insulTsTime;
+
+    /**
+     * 绝缘热冲击温度/℃
+     */
+    private Double insulTsTemp;
+
+    /**
+     * 护套热冲击时间/h
+     */
+    private Double sheathTsTime;
+
+    /**
+     * 护套热冲击温度/℃
+     */
+    private Double sheathTsTemp;
+
+    /**
+     * 绝缘低温弯曲温度/℃
+     */
+    private Double insulLtBendTemp;
+
+    /**
+     * 绝缘低温弯曲时间/H
+     */
+    private Double insulLtBendTime;
+
+    /**
+     * 绝缘低温弯曲长度
+     */
+    private Double insulLtBendLenght;
+
+    /**
+     * 护套低温弯曲温度/℃
+     */
+    private Double sheathLtBendTemp;
+
+    /**
+     * 护套低温弯曲时间/H
+     */
+    private Double sheathLtBendTime;
+
+    /**
+     * 护套低温弯曲长度
+     */
+    private Double sheathLtBendLenght;
+
+    /**
+     * 绝缘加热变形判断值
+     */
+    private Double insulHtgDv;
+
+    /**
+     * 护套加热变形判断值
+     */
+    private Double sheathHtgDv;
+
+    /**
+     * 护套表面电阻
+     */
+    private Double sheathSurfaceR;
+
+    /**
+     * 护套表面电阻判断值
+     */
+    private Double sheathSurfaceRDv;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
