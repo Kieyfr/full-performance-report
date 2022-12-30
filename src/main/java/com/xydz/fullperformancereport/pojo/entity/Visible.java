@@ -305,6 +305,26 @@ public class Visible implements Serializable {
      */
     private Boolean isGbTbfStartDistance;
 
+    /**
+     * 撕裂前最小厚度是否可见
+     */
+    private Boolean isBeforeTearingThkMin;
+
+    /**
+     * 撕裂后最小厚度是否可见
+     */
+    private Boolean isAfterTearingThkMin;
+
+    /**
+     * 隔离筋最小厚度是否可见
+     */
+    private Boolean isSpacerBarThkMin;
+
+    /**
+     * 护套表面电阻是否可见
+     */
+    private Boolean isSheathSurfaceR;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

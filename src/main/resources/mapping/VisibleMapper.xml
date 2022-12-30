@@ -63,6 +63,10 @@
             <result property="isIr90Calc" column="IS_IR90_CALC" jdbcType="DECIMAL"/>
             <result property="isDielectricPok" column="IS_DIELECTRIC_POK" jdbcType="DECIMAL"/>
             <result property="isGbTbfStartDistance" column="IS_GB_TBF_START_DISTANCE" jdbcType="DECIMAL"/>
+            <result property="isBeforeTearingThkMin" column="IS_BEFORE_TEARING_THK_MIN" jdbcType="DECIMAL"/>
+            <result property="isAfterTearingThkMin" column="IS_AFTER_TEARING_THK_MIN" jdbcType="DECIMAL"/>
+            <result property="isSpacerBarThkMin" column="IS_SPACER_BAR_THK_MIN" jdbcType="DECIMAL"/>
+            <result property="isSheathSurfaceR" column="IS_SHEATH_SURFACE_R" jdbcType="DECIMAL"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -85,6 +89,7 @@
         IS_SHEATH_AGING_TS_MVS,IS_WL,IS_LOW_TEMPERATURE_IMPACT,
         IS_HTHP,IS_THERMAL_STABILITY,IS_FLEXURE_TEST,
         IS_PRINTING_SPACE,IS_IR90_CALC,IS_DIELECTRIC_POK,
-        IS_GB_TBF_START_DISTANCE
+        IS_GB_TBF_START_DISTANCE,IS_BEFORE_TEARING_THK_MIN,IS_AFTER_TEARING_THK_MIN,
+        IS_SPACER_BAR_THK_MIN,IS_SHEATH_SURFACE_R
     </sql>
 </mapper>
