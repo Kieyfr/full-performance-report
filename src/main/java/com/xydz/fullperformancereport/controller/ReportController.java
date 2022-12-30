@@ -1,6 +1,7 @@
 package com.xydz.fullperformancereport.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xydz.fullperformancereport.pojo.entity.Report;
 import com.xydz.fullperformancereport.pojo.req.ReportVo;
 import com.xydz.fullperformancereport.pojo.resp.ResponseData;
@@ -53,19 +54,38 @@ public class ReportController {
     }
 
     /**
-     * 条件查询报告列表
+     * 根据条件以及页码查询报告列表
      *
      */
-    @GetMapping("queryReports")
-    @ApiOperation(value = "查询报告列表")
-    public ResponseData<List<Report> > queryReports(@RequestParam("reportNo")String reportNo,
-                                                    @RequestParam("specification")String specification){
+    @GetMapping("getQueryPageReports")
+    @ApiOperation(value = "根据条件以及页码查询报告列表")
+    public ResponseData<List<Report>> getQueryPageReports(@RequestParam("reportNo")String reportNo,
+                                                    @RequestParam("specification")String specification,
+                                                    @RequestParam("reportPage")Integer reportPage){
+        Page<Report> page = new Page<>(reportPage, 10);
         QueryWrapper<Report> queryWrapper = new QueryWrapper<>();
         queryWrapper.like("REPORT_NO",reportNo)
                 .like("SPECIFICATION",specification)
                 .orderByDesc("CREATE_TIME");
-        List<Report> reportList = reportService.list(queryWrapper);
+        reportService.page(page, queryWrapper);
+        List<Report> reportList = page.getRecords();
         return new ResponseData<List<Report>>("200","生成成功",reportList);
+    }
+
+    /**
+     * 根据条件以及页码查询报告列表页码数量
+     *
+     */
+    @GetMapping("getQueryPageReportsPageNum")
+    @ApiOperation(value = "根据条件以及页码查询报告列表页码数量")
+    public ResponseData<Integer> getQueryPageReports(@RequestParam("reportNo")String reportNo,
+                                                @RequestParam("specification")String specification){
+        QueryWrapper<Report> queryWrapper = new QueryWrapper<>();
+        queryWrapper.like("REPORT_NO",reportNo)
+                .like("SPECIFICATION",specification);
+        List<Report> reportList = reportService.list(queryWrapper);
+        Integer pageNum = reportList.size();
+        return new ResponseData<Integer>("200","生成成功",pageNum);
     }
 
     /**

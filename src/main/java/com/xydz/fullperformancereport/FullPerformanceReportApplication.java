@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2022/12/14
 */
 @SpringBootApplication
-@MapperScan("com.xydz.fullperformancereport.mapper")
 public class FullPerformanceReportApplication {
 
     public static void main(String[] args) {

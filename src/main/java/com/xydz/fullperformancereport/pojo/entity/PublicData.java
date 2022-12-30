@@ -1155,6 +1155,11 @@ public class PublicData implements Serializable {
      */
     private Double sheathSurfaceRDv;
 
+    /**
+     * 截面积判断值
+     */
+    private Double csaDv;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
