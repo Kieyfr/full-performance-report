@@ -138,7 +138,7 @@ public class PublicData implements Serializable {
     /**
      * 热稳定性
      */
-    private String thermalStability;
+    private Double thermalStability;
 
     /**
      * 曲挠试验
