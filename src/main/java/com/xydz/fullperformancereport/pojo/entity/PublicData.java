@@ -1160,6 +1160,31 @@ public class PublicData implements Serializable {
      */
     private Double csaDv;
 
+    /**
+     * 锭子总数
+     */
+    private Double spindleNum;
+
+    /**
+     * 每锭根数
+     */
+    private Double spindleRootNum;
+
+    /**
+     * 屏蔽单根直径
+     */
+    private Double singleShieldDiameter;
+
+    /**
+     * 节距
+     */
+    private Double pitch;
+
+    /**
+     * 屏蔽层直径
+     */
+    private Double shieldDiameter;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

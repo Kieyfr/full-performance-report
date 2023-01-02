@@ -325,6 +325,11 @@ public class Visible implements Serializable {
      */
     private Boolean isSheathSurfaceR;
 
+    /**
+     * 编织密度是否可见
+     */
+    private Boolean isBraidingDensity;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
