@@ -1185,6 +1185,291 @@ public class PublicData implements Serializable {
      */
     private Double shieldDiameter;
 
+    /**
+     * 绝缘外径判断值
+     */
+    private Double insulOdDv;
+
+    /**
+     * 剥离力测试数据1
+     */
+    private Double peelStrengthTd1;
+
+    /**
+     * 剥离力测试数据2
+     */
+    private Double peelStrengthTd2;
+
+    /**
+     * 剥离力测试数据3
+     */
+    private Double peelStrengthTd3;
+
+    /**
+     * 剥离力测试数据4
+     */
+    private Double peelStrengthTd4;
+
+    /**
+     * 低温弯曲是否无击穿
+     */
+    private String ltBendBreakdown;
+
+    /**
+     * 低温弯曲长度
+     */
+    private Double ltBendLenght;
+
+    /**
+     * 温湿度循环长度
+     */
+    private Double thcLenght;
+
+    /**
+     * 温湿度循环圈数
+     */
+    private Double thcLn;
+
+    /**
+     * 温湿度循环是否无击穿
+     */
+    private String thcCrack;
+
+    /**
+     * 耐热水长度
+     */
+    private Double hotWaterResistanceLenght;
+
+    /**
+     * 耐热水圈数
+     */
+    private Double hotWaterResistanceLn;
+
+    /**
+     * 耐热水是否无击穿
+     */
+    private String hotWaterResistanceCrack;
+
+    /**
+     * 耐热水测试值(正向)
+     */
+    private Double hotWaterResistanceForward;
+
+    /**
+     * 耐热水测试值(反向)
+     */
+    private Double hotWaterResistanceReverse;
+
+    /**
+     * 耐液体性汽油圈数
+     */
+    private Double waterResistanceGasolineLn;
+
+    /**
+     * 耐液体性汽油测试数据
+     */
+    private Double waterResistanceGasolineTd;
+
+    /**
+     * 耐液体性汽油百分比
+     */
+    private Double waterResistanceGasolinePct;
+
+    /**
+     * 耐液体性汽油是否无击穿
+     */
+    private String waterResistanceGasolineCrack;
+
+    /**
+     * 耐液体性乙醇圈数
+     */
+    private Double waterResistanceEthanolLn;
+
+    /**
+     * 耐液体性乙醇测试数据
+     */
+    private Double waterResistanceEthanolTd;
+
+    /**
+     * 耐液体性乙醇百分比
+     */
+    private Double waterResistanceEthanolPct;
+
+    /**
+     * 耐液体性乙醇是否无击穿
+     */
+    private String waterResistanceEthanolCrack;
+
+    /**
+     * 耐液体性柴油圈数
+     */
+    private Double waterResistanceDieselOilLn;
+
+    /**
+     * 耐液体性柴油测试数据
+     */
+    private Double waterResistanceDieselOilTd;
+
+    /**
+     * 耐液体性柴油百分比
+     */
+    private Double waterResistanceDieselOilPct;
+
+    /**
+     * 耐液体性柴油是否无击穿
+     */
+    private String waterResistanceDieselOilCrack;
+
+    /**
+     * 耐液体性IRM-902圈数
+     */
+    private Double waterResistanceIrm902Ln;
+
+    /**
+     * 耐液体性IRM-902测试数据
+     */
+    private Double waterResistanceIrm902Td;
+
+    /**
+     * 耐液体性IRM-902百分比
+     */
+    private Double waterResistanceIrm902Pct;
+
+    /**
+     * 耐液体性IRM-902是否无击穿
+     */
+    private String waterResistanceIrm902Crack;
+
+    /**
+     * 耐液体性IRM-903圈数
+     */
+    private Double waterResistanceIrm903Ln;
+
+    /**
+     * 耐液体性IRM-903测试数据
+     */
+    private Double waterResistanceIrm903Td;
+
+    /**
+     * 耐液体性IRM-903百分比
+     */
+    private Double waterResistanceIrm903Pct;
+
+    /**
+     * 耐液体性IRM-903是否无击穿
+     */
+    private String waterResistanceIrm903Crack;
+
+    /**
+     * 耐液体性自动排挡液圈数
+     */
+    private Double waterResistanceAtfLn;
+
+    /**
+     * 耐液体性自动排挡液测试数据
+     */
+    private Double waterResistanceAtfTd;
+
+    /**
+     * 耐液体性自动排挡液百分比
+     */
+    private Double waterResistanceAtfPct;
+
+    /**
+     * 耐液体性自动排挡液是否无击穿
+     */
+    private String waterResistanceAtfCrack;
+
+    /**
+     * 耐液体性防冻液圈数
+     */
+    private Double waterResistanceAntifreezeLn;
+
+    /**
+     * 耐液体性防冻液测试数据
+     */
+    private Double waterResistanceAntifreezeTd;
+
+    /**
+     * 耐液体性防冻液百分比
+     */
+    private Double waterResistanceAntifreezePct;
+
+    /**
+     * 耐液体性防冻液是否无击穿
+     */
+    private String waterResistanceAntifreezeCrack;
+
+    /**
+     * 耐液体性电池酸圈数
+     */
+    private Double waterResistanceBatteryAcidLn;
+
+    /**
+     * 耐液体性电池酸测试数据
+     */
+    private Double waterResistanceBatteryAcidTd;
+
+    /**
+     * 耐液体性电池酸百分比
+     */
+    private Double waterResistanceBatteryAcidPct;
+
+    /**
+     * 耐液体性电池酸是否无击穿
+     */
+    private String waterResistanceBatteryAcidCrack;
+
+    /**
+     * 阻燃试验自熄判断值
+     */
+    private Double frSelfExtinguishingDv;
+
+    /**
+     * 阻燃试验自熄时间
+     */
+    private Double frSelfExtinguishingTime;
+
+    /**
+     * 阻燃试验自熄测试值1
+     */
+    private Double frSelfExtinguishingTd1;
+
+    /**
+     * 阻燃试验自熄测试值2
+     */
+    private Double frSelfExtinguishingTd2;
+
+    /**
+     * 阻燃试验自熄测试值3
+     */
+    private Double frSelfExtinguishingTd3;
+
+    /**
+     * 阻燃试验未燃测试值1
+     */
+    private Double frUnburnedTd1;
+
+    /**
+     * 阻燃试验未燃测试值2
+     */
+    private Double frUnburnedTd2;
+
+    /**
+     * 阻燃试验未燃测试值3
+     */
+    private Double frUnburnedTd3;
+
+    /**
+     * 热延伸率
+     */
+    private Double hte;
+
+    /**
+     * 耐电压测试是否击穿
+     */
+    private String dielectricPok;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

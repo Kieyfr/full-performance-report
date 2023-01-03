@@ -330,6 +330,31 @@ public class Visible implements Serializable {
      */
     private Boolean isBraidingDensity;
 
+    /**
+     * 剥离力是否可见
+     */
+    private Boolean isPeelStrength;
+
+    /**
+     * 温湿度循环是否可见
+     */
+    private Boolean isThc;
+
+    /**
+     * 耐热水是否可见
+     */
+    private Boolean isHotWaterResistance;
+
+    /**
+     * 耐液体性是否可见
+     */
+    private Boolean isWaterResistance;
+
+    /**
+     * 阻燃试验是否可见
+     */
+    private Boolean isFr;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
