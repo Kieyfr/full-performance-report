@@ -1470,6 +1470,196 @@ public class PublicData implements Serializable {
      */
     private String dielectricPok;
 
+    /**
+     * 剥离力
+     */
+    private Double peelStrength;
+
+    /**
+     * 高温压力温度
+     */
+    private Double hthpTemp;
+
+    /**
+     * 高温压力是否开裂
+     */
+    private String hthpCrack;
+
+    /**
+     * 低温卷绕重量/kg
+     */
+    private Double lowTemperatureWindingWeight;
+
+    /**
+     * 低温卷绕圈数
+     */
+    private Double lowTemperatureWindingLn;
+
+    /**
+     * 低温卷绕是否开裂
+     */
+    private String lowTemperatureWindingCrack;
+
+    /**
+     * 耐磨性（刮磨）判断值
+     */
+    private Double arDv;
+
+    /**
+     * 耐磨性（刮磨）测试值
+     */
+    private Double ar;
+
+    /**
+     * 长期老化摄氏度
+     */
+    private Double longTermAgingTemp;
+
+    /**
+     * 长期老化圈数
+     */
+    private Double longTermAgingLn;
+
+    /**
+     * 长期老化是否开裂
+     */
+    private String longTermAgingCrack;
+
+    /**
+     * 短期老化摄氏度
+     */
+    private Double shortTermAgingTemp;
+
+    /**
+     * 短期老化圈数
+     */
+    private Double shortTermAgingLn;
+
+    /**
+     * 短期老化重量/kg
+     */
+    private Double shortTermAgingWeight;
+
+    /**
+     * 短期老化是否开裂
+     */
+    private String shortTermAgingCrack;
+
+    /**
+     * 热过载圈数
+     */
+    private Double thermalOverloadLn;
+
+    /**
+     * 热过载是否开裂
+     */
+    private String thermalOverloadCrack;
+
+    /**
+     * 热收缩测试值
+     */
+    private Double thermalShrinkage;
+
+    /**
+     * 温湿度交变圈数
+     */
+    private Double temperatureHumidityHlternationLn;
+
+    /**
+     * 温湿度交变摄氏度1
+     */
+    private Double temperatureHumidityHlternationTemp1;
+
+    /**
+     * 温湿度交变摄氏度2
+     */
+    private Double temperatureHumidityHlternationTemp2;
+
+    /**
+     * 温湿度交变是否开裂
+     */
+    private String temperatureHumidityHlternationCrack;
+
+    /**
+     * 耐臭氧圈数
+     */
+    private Double ozoneResistanceLn;
+
+    /**
+     * 耐臭氧是否击穿
+     */
+    private String ozoneResistancePok;
+
+    /**
+     * 耐液体性发动机冷却液圈数
+     */
+    private Double waterResistanceEngineCoolantLn;
+
+    /**
+     * 耐液体性发动机冷却液测试数据
+     */
+    private Double waterResistanceEngineCoolantTd;
+
+    /**
+     * 耐液体性发动机冷却液百分比
+     */
+    private Double waterResistanceEngineCoolantPct;
+
+    /**
+     * 耐液体性发动机冷却液是否无击穿
+     */
+    private String waterResistanceEngineCoolantCrack;
+
+    /**
+     * 耐液体性发动机润滑油圈数
+     */
+    private Double waterResistanceEngineOilLn;
+
+    /**
+     * 耐液体性发动机润滑油测试数据
+     */
+    private Double waterResistanceEngineOilTd;
+
+    /**
+     * 耐液体性发动机润滑油百分比
+     */
+    private Double waterResistanceEngineOilPct;
+
+    /**
+     * 耐液体性发动机润滑油是否无击穿
+     */
+    private String waterResistanceEngineOilCrack;
+
+    /**
+     * 耐液体性转向助力液圈数
+     */
+    private Double waterResistancePowerSteeringFluidLn;
+
+    /**
+     * 耐液体性转向助力液测试数据
+     */
+    private Double waterResistancePowerSteeringFluidTd;
+
+    /**
+     * 耐液体性转向助力液百分比
+     */
+    private Double waterResistancePowerSteeringFluidPct;
+
+    /**
+     * 耐液体性转向助力液是否无击穿
+     */
+    private String waterResistancePowerSteeringFluidCrack;
+
+    /**
+     * 耐液体性电池酸是否无击穿
+     */
+    private String waterResistanceBatteryAcidPok;
+
+    /**
+     * 阻燃试验自熄时间
+     */
+    private Double frFireSupplyTime;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

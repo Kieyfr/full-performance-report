@@ -355,6 +355,51 @@ public class Visible implements Serializable {
      */
     private Boolean isFr;
 
+    /**
+     * 低温卷绕是否可见
+     */
+    private Boolean isLowTemperatureWinding;
+
+    /**
+     * 耐磨性（刮磨）是否可见
+     */
+    private Boolean isAr;
+
+    /**
+     * 长期老化是否可见
+     */
+    private Boolean isLongTermAging;
+
+    /**
+     * 短期老化是否可见
+     */
+    private Boolean isShortTermAging;
+
+    /**
+     * 热过载是否可见
+     */
+    private Boolean isThermalOverload;
+
+    /**
+     * 热收缩是否可见
+     */
+    private Boolean isThermalShrinkage;
+
+    /**
+     * 温湿度交变是否可见
+     */
+    private Boolean isTemperatureHumidityHlternation;
+
+    /**
+     * 耐臭氧是否可见
+     */
+    private Boolean isOzoneResistance;
+
+    /**
+     * 耐电池酸是否可见
+     */
+    private Boolean isBatteryAcid;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
