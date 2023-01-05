@@ -400,6 +400,31 @@ public class Visible implements Serializable {
      */
     private Boolean isBatteryAcid;
 
+    /**
+     * 附着力是否可见
+     */
+    private Boolean isAdhesion;
+
+    /**
+     * 加热变形是否可见
+     */
+    private Boolean isHtg;
+
+    /**
+     * 耐热性1(A)是否可见
+     */
+    private Boolean isHr1A;
+
+    /**
+     * 耐热性1(B)是否可见
+     */
+    private Boolean isHr1B;
+
+    /**
+     * 耐热性1(C)是否可见
+     */
+    private Boolean isHr1C;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

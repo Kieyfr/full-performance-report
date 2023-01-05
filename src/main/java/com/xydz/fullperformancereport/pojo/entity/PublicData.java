@@ -1656,9 +1656,169 @@ public class PublicData implements Serializable {
     private String waterResistanceBatteryAcidPok;
 
     /**
-     * 阻燃试验自熄时间
+     * 阻燃试验供火时间
      */
     private Double frFireSupplyTime;
+
+    /**
+     * 附着力判断值
+     */
+    private Double adhesionDv;
+
+    /**
+     * 附着力测试数据1
+     */
+    private Double adhesionTd1;
+
+    /**
+     * 附着力测试数据2
+     */
+    private Double adhesionTd2;
+
+    /**
+     * 附着力测试数据3
+     */
+    private Double adhesionTd3;
+
+    /**
+     * 附着力测试数据4
+     */
+    private Double adhesionTd4;
+
+    /**
+     * 附着力测试数据5
+     */
+    private Double adhesionTd5;
+
+    /**
+     * 加热变形摄氏度
+     */
+    private Double htgTemp;
+
+    /**
+     * 加热变形是否无开裂
+     */
+    private String htgCrack;
+
+    /**
+     * 加热变形是否无击穿
+     */
+    private String htgPok;
+
+    /**
+     * 低温弯曲重量
+     */
+    private Double ltBendWeight;
+
+    /**
+     * 低温冲击是否无击穿
+     */
+    private String lowTemperatureImpactPok;
+
+    /**
+     * 耐热性1(A)摄氏度
+     */
+    private Double hr1ATemp;
+
+    /**
+     * 耐热性1(A)时间
+     */
+    private Double hr1ATime;
+
+    /**
+     * 耐热性1(A)长度
+     */
+    private Double hr1ALenght;
+
+    /**
+     * 耐热性1(A)重量
+     */
+    private Double hr1AWeight;
+
+    /**
+     * 耐热性1(A)是否无开裂
+     */
+    private String hr1ACrack;
+
+    /**
+     * 耐热性1(A)是否无击穿
+     */
+    private String hr1APok;
+
+    /**
+     * 耐热性1(B)摄氏度
+     */
+    private Double hr1BTemp;
+
+    /**
+     * 耐热性1(B)时间
+     */
+    private Double hr1BTime;
+
+    /**
+     * 耐热性1(B)长度
+     */
+    private Double hr1BLenght;
+
+    /**
+     * 耐热性1(B)重量
+     */
+    private Double hr1BWeight;
+
+    /**
+     * 热性1(B)是否无开裂
+     */
+    private String hr1BCrack;
+
+    /**
+     * 耐热性1(B)是否无击穿
+     */
+    private String hr1BPok;
+
+    /**
+     * 耐热性1(C)是否无开裂
+     */
+    private String hr1CCrack;
+
+    /**
+     * 耐液体性汽油是否无击穿
+     */
+    private String waterResistanceGasolinePok;
+
+    /**
+     * 耐液体性柴油是否无击穿
+     */
+    private String waterResistanceDieselOilPok;
+
+    /**
+     * 耐液体性乙醇是否无击穿
+     */
+    private String waterResistanceEthanolPok;
+
+    /**
+     * 耐液体性自动排挡液是否无击穿
+     */
+    private String waterResistanceAtfPok;
+
+    /**
+     * 耐液体性防冻液是否无击穿
+     */
+    private String waterResistanceAntifreezePok;
+
+    /**
+     * 耐液体性IRM-902是否无击穿
+     */
+    private String waterResistanceIrm902Pok;
+
+    /**
+     * 耐液体性IRM-903是否无击穿
+     */
+    private String waterResistanceIrm903Pok;
+
+    /**
+     * 阻燃试验自熄测试值
+     */
+    private Double frSelfExtinguishingTd;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
