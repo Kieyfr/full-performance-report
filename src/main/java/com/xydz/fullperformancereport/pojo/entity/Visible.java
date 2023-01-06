@@ -425,6 +425,46 @@ public class Visible implements Serializable {
      */
     private Boolean isHr1C;
 
+    /**
+     * 热延伸试验是否可见
+     */
+    private Boolean isHotStretch;
+
+    /**
+     * 标志连续性是否可见
+     */
+    private Boolean isSignContinuity;
+
+    /**
+     * 浸水工频电压试验是否可见
+     */
+    private Boolean isImmersionPowerFrequencyVoltage;
+
+    /**
+     * 室温工频电压试验是否可见
+     */
+    private Boolean isRoomTempPowerFrequencyVoltage;
+
+    /**
+     * 额定温度工频电压试验是否可见
+     */
+    private Boolean isRatedTempPowerFrequencyVoltage;
+
+    /**
+     * 水平燃烧试验是否可见
+     */
+    private Boolean isHorizontalBurning;
+
+    /**
+     * 垂直燃烧试验是否可见
+     */
+    private Boolean isVerticalBurning;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)是否可见
+     */
+    private Boolean isZVerticalBurning;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

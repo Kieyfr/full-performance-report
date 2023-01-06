@@ -1820,6 +1820,176 @@ public class PublicData implements Serializable {
      */
     private Double frSelfExtinguishingTd;
 
+    /**
+     * 热冲击长度
+     */
+    private Double tsLenght;
+
+    /**
+     * 热延伸试验负荷下长度
+     */
+    private Double hotStretchLoadLenght;
+
+    /**
+     * 热延伸试验冷却后长度
+     */
+    private Double hotStretchCoolingLenght;
+
+    /**
+     * 标志连续性
+     */
+    private Double signContinuity;
+
+    /**
+     * 浸水工频电压试验耐压
+     */
+    private Double immersionPowerFrequencyVoltageVoltage;
+
+    /**
+     * 浸水工频电压试验耐压时间
+     */
+    private Double immersionPowerFrequencyVoltageVoltageTime;
+
+    /**
+     * 浸水工频电压试验是否无击穿
+     */
+    private String immersionPowerFrequencyVoltagePok;
+
+    /**
+     * 室温工频电压试验摄氏度
+     */
+    private Double roomTempPowerFrequencyVoltageTemp;
+
+    /**
+     * 室温工频电压试验时间
+     */
+    private Double roomTempPowerFrequencyVoltageTime;
+
+    /**
+     * 室温工频电压试验长度
+     */
+    private Double roomTempPowerFrequencyVoltageLenght;
+
+    /**
+     * 室温工频电压试验圈数
+     */
+    private Double roomTempPowerFrequencyVoltageLn;
+
+    /**
+     * 室温工频电压试验未老化样品耐压
+     */
+    private Double roomTempPowerFrequencyVoltageUnagedVoltage;
+
+    /**
+     * 室温工频电压试验未老化样品耐压时间
+     */
+    private Double roomTempPowerFrequencyVoltageUnagedVoltageTime;
+
+    /**
+     * 室温工频电压试验老化样品耐压
+     */
+    private Double roomTempPowerFrequencyVoltageAgingVoltage;
+
+    /**
+     * 室温工频电压试验老化样品耐压时间
+     */
+    private Double roomTempPowerFrequencyVoltageAgingVoltageTime;
+
+    /**
+     * 室温工频电压试验是否无击穿
+     */
+    private String roomTempPowerFrequencyVoltagePok;
+
+    /**
+     * 额定温度工频电压试验摄氏度
+     */
+    private Double ratedTempPowerFrequencyVoltageTemp;
+
+    /**
+     * 额定温度工频电压试验时间
+     */
+    private Double ratedTempPowerFrequencyVoltageTime;
+
+    /**
+     * 额定温度工频电压试验烤摄氏度
+     */
+    private Double ratedTempPowerFrequencyVoltageRoastTemp;
+
+    /**
+     * 额定温度工频电压试验烤耐压
+     */
+    private Double ratedTempPowerFrequencyVoltageVoltage;
+
+    /**
+     * 额定温度工频电压试验耐压时间
+     */
+    private Double ratedTempPowerFrequencyVoltageVoltageTime;
+
+    /**
+     * 额定温度工频电压试验是否无击穿
+     */
+    private String ratedTempPowerFrequencyVoltagePok;
+
+    /**
+     * 水平燃烧棉花是否点燃测试数据1
+     */
+    private String lightCottonHorizontalTd1;
+
+    /**
+     * 水平燃烧棉花是否点燃测试数据2
+     */
+    private String lightCottonHorizontalTd2;
+
+    /**
+     * 水平燃烧棉花是否点燃测试数据3
+     */
+    private String lightCottonHorizontalTd3;
+
+    /**
+     * 垂直燃烧棉花是否点燃测试数据1
+     */
+    private String lightCottonVerticalTd1;
+
+    /**
+     * 垂直燃烧棉花是否点燃测试数据2
+     */
+    private String lightCottonVerticalTd2;
+
+    /**
+     * 垂直燃烧棉花是否点燃测试数据3
+     */
+    private String lightCottonVerticalTd3;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据1
+     */
+    private Double zTbfStartDistanceTd1;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据2
+     */
+    private Double zTbfStartDistanceTd2;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据3
+     */
+    private Double zTbfStartDistanceTd3;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据1
+     */
+    private Double zTbfBurningDistanceTd1;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据2
+     */
+    private Double zTbfBurningDistanceTd2;
+
+    /**
+     * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据3
+     */
+    private Double zTbfBurningDistanceTd3;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
