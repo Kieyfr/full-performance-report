@@ -465,6 +465,71 @@ public class Visible implements Serializable {
      */
     private Boolean isZVerticalBurning;
 
+    /**
+     * 兼容性条件是否可见
+     */
+    private Boolean isCompatibility;
+
+    /**
+     * 兼容性绝缘延伸率中间值是否可见
+     */
+    private Boolean isCompatibilityInsulUnagedEiMvs;
+
+    /**
+     * 兼容性绝缘抗张中间值是否可见
+     */
+    private Boolean isCompatibilityInsulUnagedTsMvs;
+
+    /**
+     * 兼容性绝缘老化后延伸率中间值是否可见
+     */
+    private Boolean isCompatibilityInsulAgingEiMvs;
+
+    /**
+     * 兼容性绝缘老化后抗张中间值是否可见
+     */
+    private Boolean isCompatibilityInsulAgingTsMvs;
+
+    /**
+     * 兼容性绝缘老化后延伸残率是否可见||兼容性绝缘老化延伸变化率是否可见
+     */
+    private Boolean isCompatibilityInsulAgingEi;
+
+    /**
+     * 兼容性绝缘老化后抗张残率是否可见||兼容性绝缘老化抗张变化率是否可见
+     */
+    private Boolean isCompatibilityInsulAgingTs;
+
+    /**
+     * 兼容性护套延伸率中间值是否可见
+     */
+    private Boolean isCompatibilitySheathUnagedEiMvs;
+
+    /**
+     * 兼容性护套抗张中间值是否可见
+     */
+    private Boolean isCompatibilitySheathUnagedTsMvs;
+
+    /**
+     * 兼容性护套老化后延伸率中间值是否可见
+     */
+    private Boolean isCompatibilitySheathAgingEiMvs;
+
+    /**
+     * 兼容性护套老化后抗张中间值是否可见
+     */
+    private Boolean isCompatibilitySheathAgingTsMvs;
+
+    /**
+     * 兼容性护套老化后延伸残率是否可见||兼容性护套老化延伸变化率是否可见
+     */
+    private Boolean isCompatibilitySheathAgingEi;
+
+    /**
+     * 兼容性护套老化后抗张残率是否可见||兼容性护套老化抗张变化率是否可见
+     */
+    private Boolean isCompatibilitySheathAgingTs;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

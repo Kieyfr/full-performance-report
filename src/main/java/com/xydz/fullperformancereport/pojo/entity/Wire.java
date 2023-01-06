@@ -354,6 +354,126 @@ public class Wire implements Serializable {
      */
     private Double insulThkTd18;
 
+    /**
+     * 兼容性绝缘老化前伸长测试数据1
+     */
+    private Double compatibilityInsulUnagedElongationTd1;
+
+    /**
+     * 兼容性绝缘老化前伸长测试数据2
+     */
+    private Double compatibilityInsulUnagedElongationTd2;
+
+    /**
+     * 兼容性绝缘老化前伸长测试数据3
+     */
+    private Double compatibilityInsulUnagedElongationTd3;
+
+    /**
+     * 兼容性绝缘老化前伸长测试数据4
+     */
+    private Double compatibilityInsulUnagedElongationTd4;
+
+    /**
+     * 兼容性绝缘老化前伸长测试数据5
+     */
+    private Double compatibilityInsulUnagedElongationTd5;
+
+    /**
+     * 兼容性绝缘老化前伸长测试数据6
+     */
+    private Double compatibilityInsulUnagedElongationTd6;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据1
+     */
+    private Double compatibilityInsulUnagedPullTd1;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据2
+     */
+    private Double compatibilityInsulUnagedPullTd2;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据3
+     */
+    private Double compatibilityInsulUnagedPullTd3;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据4
+     */
+    private Double compatibilityInsulUnagedPullTd4;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据5
+     */
+    private Double compatibilityInsulUnagedPullTd5;
+
+    /**
+     * 兼容性绝缘老化前拉力测试数据6
+     */
+    private Double compatibilityInsulUnagedPullTd6;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据1
+     */
+    private Double compatibilityInsulAgingElongationTd1;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据2
+     */
+    private Double compatibilityInsulAgingElongationTd2;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据3
+     */
+    private Double compatibilityInsulAgingElongationTd3;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据4
+     */
+    private Double compatibilityInsulAgingElongationTd4;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据5
+     */
+    private Double compatibilityInsulAgingElongationTd5;
+
+    /**
+     * 兼容性绝缘老化后伸长测试数据6
+     */
+    private Double compatibilityInsulAgingElongationTd6;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据1
+     */
+    private Double compatibilityInsulAgingPullTd1;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据2
+     */
+    private Double compatibilityInsulAgingPullTd2;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据3
+     */
+    private Double compatibilityInsulAgingPullTd3;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据4
+     */
+    private Double compatibilityInsulAgingPullTd4;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据5
+     */
+    private Double compatibilityInsulAgingPullTd5;
+
+    /**
+     * 兼容性绝缘老化后拉力测试数据6
+     */
+    private Double compatibilityInsulAgingPullTd6;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

@@ -1990,6 +1990,206 @@ public class PublicData implements Serializable {
      */
     private Double zTbfBurningDistanceTd3;
 
+    /**
+     * 兼容性护套老化前伸长测试数据1
+     */
+    private Double compatibilitySheathUnagedElongationTd1;
+
+    /**
+     * 兼容性护套老化前伸长测试数据2
+     */
+    private Double compatibilitySheathUnagedElongationTd2;
+
+    /**
+     * 兼容性护套老化前伸长测试数据3
+     */
+    private Double compatibilitySheathUnagedElongationTd3;
+
+    /**
+     * 兼容性护套老化前伸长测试数据4
+     */
+    private Double compatibilitySheathUnagedElongationTd4;
+
+    /**
+     * 兼容性护套老化前伸长测试数据5
+     */
+    private Double compatibilitySheathUnagedElongationTd5;
+
+    /**
+     * 兼容性护套老化前伸长测试数据6
+     */
+    private Double compatibilitySheathUnagedElongationTd6;
+
+    /**
+     * 兼容性护套老化前拉力测试数据1
+     */
+    private Double compatibilitySheathUnagedPullTd1;
+
+    /**
+     * 兼容性护套老化前拉力测试数据2
+     */
+    private Double compatibilitySheathUnagedPullTd2;
+
+    /**
+     * 兼容性护套老化前拉力测试数据3
+     */
+    private Double compatibilitySheathUnagedPullTd3;
+
+    /**
+     * 兼容性护套老化前拉力测试数据4
+     */
+    private Double compatibilitySheathUnagedPullTd4;
+
+    /**
+     * 兼容性护套老化前拉力测试数据5
+     */
+    private Double compatibilitySheathUnagedPullTd5;
+
+    /**
+     * 兼容性护套老化前拉力测试数据6
+     */
+    private Double compatibilitySheathUnagedPullTd6;
+
+    /**
+     * 兼容性护套老化后伸长测试数据1
+     */
+    private Double compatibilitySheathAgingElongationTd1;
+
+    /**
+     * 兼容性护套老化后伸长测试数据2
+     */
+    private Double compatibilitySheathAgingElongationTd2;
+
+    /**
+     * 兼容性护套老化后伸长测试数据3
+     */
+    private Double compatibilitySheathAgingElongationTd3;
+
+    /**
+     * 兼容性护套老化后伸长测试数据4
+     */
+    private Double compatibilitySheathAgingElongationTd4;
+
+    /**
+     * 兼容性护套老化后伸长测试数据5
+     */
+    private Double compatibilitySheathAgingElongationTd5;
+
+    /**
+     * 兼容性护套老化后伸长测试数据6
+     */
+    private Double compatibilitySheathAgingElongationTd6;
+
+    /**
+     * 兼容性护套老化后拉力测试数据1
+     */
+    private Double compatibilitySheathAgingPullTd1;
+
+    /**
+     * 兼容性护套老化后拉力测试数据2
+     */
+    private Double compatibilitySheathAgingPullTd2;
+
+    /**
+     * 兼容性护套老化后拉力测试数据3
+     */
+    private Double compatibilitySheathAgingPullTd3;
+
+    /**
+     * 兼容性护套老化后拉力测试数据4
+     */
+    private Double compatibilitySheathAgingPullTd4;
+
+    /**
+     * 兼容性护套老化后拉力测试数据5
+     */
+    private Double compatibilitySheathAgingPullTd5;
+
+    /**
+     * 兼容性护套老化后拉力测试数据6
+     */
+    private Double compatibilitySheathAgingPullTd6;
+
+    /**
+     * 兼容性绝缘延伸率中间值判断值
+     */
+    private Double compatibilityInsulUnagedEiMvsDv;
+
+    /**
+     * 兼容性绝缘抗张中间值判断值
+     */
+    private Double compatibilityInsulUnagedTsMvsDv;
+
+    /**
+     * 兼容性绝缘老化后延伸率中间值判断值
+     */
+    private Double compatibilityInsulAgingEiMvsDv;
+
+    /**
+     * 兼容性绝缘老化后抗张中间值判断值
+     */
+    private Double compatibilityInsulAgingTsMvsDv;
+
+    /**
+     * 兼容性绝缘老化后延伸残率判断值||兼容性绝缘老化延伸变化率判断值
+     */
+    private Double compatibilityInsulAgingEi;
+
+    /**
+     * 兼容性绝缘老化后抗张残率判断值||兼容性绝缘老化抗张变化率判断值
+     */
+    private Double compatibilityInsulAgingTs;
+
+    /**
+     * 兼容性护套延伸率中间值判断值
+     */
+    private Double compatibilitySheathUnagedEiMvsDv;
+
+    /**
+     * 兼容性护套抗张中间值判断值
+     */
+    private Double compatibilitySheathUnagedTsMvsDv;
+
+    /**
+     * 兼容性护套老化后延伸率中间值判断值
+     */
+    private Double compatibilitySheathAgingEiMvsDv;
+
+    /**
+     * 兼容性护套老化后抗张中间值判断值
+     */
+    private Double compatibilitySheathAgingTsMvsDv;
+
+    /**
+     * 兼容性护套老化后延伸残率判断值||兼容性护套老化延伸变化率判断值
+     */
+    private Double compatibilitySheathAgingEi;
+
+    /**
+     * 兼容性护套老化后抗张残率判断值||兼容性护套老化抗张变化率判断值
+     */
+    private Double compatibilitySheathAgingTs;
+
+    /**
+     * 曲挠次数
+     */
+    private Double flexureFrequency;
+
+    /**
+     * 90℃绝缘电阻
+     */
+    private Double ir90Calc;
+
+    /**
+     * 绝缘耐电压测试电流/M
+     */
+    private Double insulDielectricWithstandVoltageCurrent;
+
+    /**
+     * 成品耐电压测试电流/M||护套耐电压测试电流/M
+     */
+    private Double fgDielectricWithstandVoltageCurrent;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
