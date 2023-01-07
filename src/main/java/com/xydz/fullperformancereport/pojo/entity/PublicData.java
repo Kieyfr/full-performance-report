@@ -2576,14 +2576,14 @@ public class PublicData implements Serializable {
     private Double dielectricWithstandVoltageTiem;
 
     /**
-     * C1测试值
+     * Cl测试值
      */
-    private Double c1;
+    private Double cl;
 
     /**
-     * B2测试值
+     * Br测试值
      */
-    private Double b2;
+    private Double br;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

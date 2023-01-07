@@ -596,14 +596,14 @@ public class Visible implements Serializable {
     private Boolean isSheathHotStretchLoadHte;
 
     /**
-     * C1是否可见
+     * Cl是否可见
      */
-    private Boolean isC1;
+    private Boolean isCl;
 
     /**
-     * B2是否可见
+     * Br是否可见
      */
-    private Boolean isB2;
+    private Boolean isBr;
 
     /**
      * 耐碱条件是否可见
