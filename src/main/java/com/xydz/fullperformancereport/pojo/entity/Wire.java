@@ -604,6 +604,11 @@ public class Wire implements Serializable {
      */
     private Double insulHotStretchCoolingHte;
 
+    /**
+     * 绝缘电阻测试数据
+     */
+    private Double irCalc;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
