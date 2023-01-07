@@ -2190,6 +2190,401 @@ public class PublicData implements Serializable {
      */
     private Double fgDielectricWithstandVoltageCurrent;
 
+    /**
+     * 护套外径判断值
+     */
+    private Double sheathOdDv;
+
+    /**
+     * 耐酸护套老化前伸长测试数据1
+     */
+    private Double arSheathUnagedElongationTd1;
+
+    /**
+     * 耐酸护套老化前伸长测试数据2
+     */
+    private Double arSheathUnagedElongationTd2;
+
+    /**
+     * 耐酸护套老化前伸长测试数据3
+     */
+    private Double arSheathUnagedElongationTd3;
+
+    /**
+     * 耐酸护套老化前伸长测试数据4
+     */
+    private Double arSheathUnagedElongationTd4;
+
+    /**
+     * 耐酸护套老化前伸长测试数据5
+     */
+    private Double arSheathUnagedElongationTd5;
+
+    /**
+     * 耐酸护套老化前伸长测试数据6
+     */
+    private Double arSheathUnagedElongationTd6;
+
+    /**
+     * 耐酸护套老化前拉力测试数据1
+     */
+    private Double arSheathUnagedPullTd1;
+
+    /**
+     * 耐酸护套老化前拉力测试数据2
+     */
+    private Double arSheathUnagedPullTd2;
+
+    /**
+     * 耐酸护套老化前拉力测试数据3
+     */
+    private Double arSheathUnagedPullTd3;
+
+    /**
+     * 耐酸护套老化前拉力测试数据4
+     */
+    private Double arSheathUnagedPullTd4;
+
+    /**
+     * 耐酸护套老化前拉力测试数据5
+     */
+    private Double arSheathUnagedPullTd5;
+
+    /**
+     * 耐酸护套老化前拉力测试数据6
+     */
+    private Double arSheathUnagedPullTd6;
+
+    /**
+     * 耐酸护套老化后伸长测试数据1
+     */
+    private Double arSheathAgingElongationTd1;
+
+    /**
+     * 耐酸护套老化后伸长测试数据2
+     */
+    private Double arSheathAgingElongationTd2;
+
+    /**
+     * 耐酸护套老化后伸长测试数据3
+     */
+    private Double arSheathAgingElongationTd3;
+
+    /**
+     * 耐酸护套老化后伸长测试数据4
+     */
+    private Double arSheathAgingElongationTd4;
+
+    /**
+     * 耐酸护套老化后伸长测试数据5
+     */
+    private Double arSheathAgingElongationTd5;
+
+    /**
+     * 耐酸护套老化后伸长测试数据6
+     */
+    private Double arSheathAgingElongationTd6;
+
+    /**
+     * 耐酸护套老化后拉力测试数据1
+     */
+    private Double arSheathAgingPullTd1;
+
+    /**
+     * 耐酸护套老化后拉力测试数据2
+     */
+    private Double arSheathAgingPullTd2;
+
+    /**
+     * 耐酸护套老化后拉力测试数据3
+     */
+    private Double arSheathAgingPullTd3;
+
+    /**
+     * 耐酸护套老化后拉力测试数据4
+     */
+    private Double arSheathAgingPullTd4;
+
+    /**
+     * 耐酸护套老化后拉力测试数据5
+     */
+    private Double arSheathAgingPullTd5;
+
+    /**
+     * 耐酸护套老化后拉力测试数据6
+     */
+    private Double arSheathAgingPullTd6;
+    
+    /**
+     * 耐碱护套老化前伸长测试数据1
+     */
+    private Double apSheathUnagedElongationTd1;
+
+    /**
+     * 耐碱护套老化前伸长测试数据2
+     */
+    private Double apSheathUnagedElongationTd2;
+
+    /**
+     * 耐碱护套老化前伸长测试数据3
+     */
+    private Double apSheathUnagedElongationTd3;
+
+    /**
+     * 耐碱护套老化前伸长测试数据4
+     */
+    private Double apSheathUnagedElongationTd4;
+
+    /**
+     * 耐碱护套老化前伸长测试数据5
+     */
+    private Double apSheathUnagedElongationTd5;
+
+    /**
+     * 耐碱护套老化前伸长测试数据6
+     */
+    private Double apSheathUnagedElongationTd6;
+
+    /**
+     * 耐碱护套老化前拉力测试数据1
+     */
+    private Double apSheathUnagedPullTd1;
+
+    /**
+     * 耐碱护套老化前拉力测试数据2
+     */
+    private Double apSheathUnagedPullTd2;
+
+    /**
+     * 耐碱护套老化前拉力测试数据3
+     */
+    private Double apSheathUnagedPullTd3;
+
+    /**
+     * 耐碱护套老化前拉力测试数据4
+     */
+    private Double apSheathUnagedPullTd4;
+
+    /**
+     * 耐碱护套老化前拉力测试数据5
+     */
+    private Double apSheathUnagedPullTd5;
+
+    /**
+     * 耐碱护套老化前拉力测试数据6
+     */
+    private Double apSheathUnagedPullTd6;
+
+    /**
+     * 耐碱护套老化后伸长测试数据1
+     */
+    private Double apSheathAgingElongationTd1;
+
+    /**
+     * 耐碱护套老化后伸长测试数据2
+     */
+    private Double apSheathAgingElongationTd2;
+
+    /**
+     * 耐碱护套老化后伸长测试数据3
+     */
+    private Double apSheathAgingElongationTd3;
+
+    /**
+     * 耐碱护套老化后伸长测试数据4
+     */
+    private Double apSheathAgingElongationTd4;
+
+    /**
+     * 耐碱护套老化后伸长测试数据5
+     */
+    private Double apSheathAgingElongationTd5;
+
+    /**
+     * 耐碱护套老化后伸长测试数据6
+     */
+    private Double apSheathAgingElongationTd6;
+
+    /**
+     * 耐碱护套老化后拉力测试数据1
+     */
+    private Double apSheathAgingPullTd1;
+
+    /**
+     * 耐碱护套老化后拉力测试数据2
+     */
+    private Double apSheathAgingPullTd2;
+
+    /**
+     * 耐碱护套老化后拉力测试数据3
+     */
+    private Double apSheathAgingPullTd3;
+
+    /**
+     * 耐碱护套老化后拉力测试数据4
+     */
+    private Double apSheathAgingPullTd4;
+
+    /**
+     * 耐碱护套老化后拉力测试数据5
+     */
+    private Double apSheathAgingPullTd5;
+
+    /**
+     * 耐碱护套老化后拉力测试数据6
+     */
+    private Double apSheathAgingPullTd6;
+
+    /**
+     * 热寿命护套老化前伸长测试数据1
+     */
+    private Double thermalLifeSheathUnagedElongationTd1;
+
+    /**
+     * 热寿命护套老化前伸长测试数据2
+     */
+    private Double thermalLifeSheathUnagedElongationTd2;
+
+    /**
+     * 热寿命护套老化前伸长测试数据3
+     */
+    private Double thermalLifeSheathUnagedElongationTd3;
+
+    /**
+     * 热寿命护套老化前伸长测试数据4
+     */
+    private Double thermalLifeSheathUnagedElongationTd4;
+
+    /**
+     * 热寿命护套老化前伸长测试数据5
+     */
+    private Double thermalLifeSheathUnagedElongationTd5;
+
+    /**
+     * 热寿命护套老化前伸长测试数据6
+     */
+    private Double thermalLifeSheathUnagedElongationTd6;
+
+    /**
+     * 热寿命护套老化前拉力测试数据1
+     */
+    private Double thermalLifeSheathUnagedPullTd1;
+
+    /**
+     * 热寿命护套老化前拉力测试数据2
+     */
+    private Double thermalLifeSheathUnagedPullTd2;
+
+    /**
+     * 热寿命护套老化前拉力测试数据3
+     */
+    private Double thermalLifeSheathUnagedPullTd3;
+
+    /**
+     * 热寿命护套老化前拉力测试数据4
+     */
+    private Double thermalLifeSheathUnagedPullTd4;
+
+    /**
+     * 热寿命护套老化前拉力测试数据5
+     */
+    private Double thermalLifeSheathUnagedPullTd5;
+
+    /**
+     * 热寿命护套老化前拉力测试数据6
+     */
+    private Double thermalLifeSheathUnagedPullTd6;
+
+    /**
+     * 热寿命护套老化后伸长测试数据1
+     */
+    private Double thermalLifeSheathAgingElongationTd1;
+
+    /**
+     * 热寿命护套老化后伸长测试数据2
+     */
+    private Double thermalLifeSheathAgingElongationTd2;
+
+    /**
+     * 热寿命护套老化后伸长测试数据3
+     */
+    private Double thermalLifeSheathAgingElongationTd3;
+
+    /**
+     * 热寿命护套老化后伸长测试数据4
+     */
+    private Double thermalLifeSheathAgingElongationTd4;
+
+    /**
+     * 热寿命护套老化后伸长测试数据5
+     */
+    private Double thermalLifeSheathAgingElongationTd5;
+
+    /**
+     * 热寿命护套老化后伸长测试数据6
+     */
+    private Double thermalLifeSheathAgingElongationTd6;
+
+    /**
+     * 热寿命护套老化后拉力测试数据1
+     */
+    private Double thermalLifeSheathAgingPullTd1;
+
+    /**
+     * 热寿命护套老化后拉力测试数据2
+     */
+    private Double thermalLifeSheathAgingPullTd2;
+
+    /**
+     * 热寿命护套老化后拉力测试数据3
+     */
+    private Double thermalLifeSheathAgingPullTd3;
+
+    /**
+     * 热寿命护套老化后拉力测试数据4
+     */
+    private Double thermalLifeSheathAgingPullTd4;
+
+    /**
+     * 热寿命护套老化后拉力测试数据5
+     */
+    private Double thermalLifeSheathAgingPullTd5;
+
+    /**
+     * 热寿命护套老化后拉力测试数据6
+     */
+    private Double thermalLifeSheathAgingPullTd6;
+
+    /**
+     * 护套热延伸试验负荷下热延伸率
+     */
+    private Double sheathHotStretchLoadHte;
+
+    /**
+     * 护套热延伸试验冷却后热延伸率
+     */
+    private Double sheathHotStretchCoolingHte;
+
+    /**
+     * 耐电压测试耐压/kv
+     */
+    private Double dielectricWithstandVoltage;
+
+    /**
+     * 耐电压测试耐压时间/min
+     */
+    private Double dielectricWithstandVoltageTiem;
+
+    /**
+     * C1测试值
+     */
+    private Double c1;
+
+    /**
+     * B2测试值
+     */
+    private Double b2;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

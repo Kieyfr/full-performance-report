@@ -474,6 +474,136 @@ public class Wire implements Serializable {
      */
     private Double compatibilityInsulAgingPullTd6;
 
+    /**
+     * 热寿命绝缘老化前伸长测试数据1
+     */
+    private Double thermalLifeInsulUnagedElongationTd1;
+
+    /**
+     * 热寿命绝缘老化前伸长测试数据2
+     */
+    private Double thermalLifeInsulUnagedElongationTd2;
+
+    /**
+     * 热寿命绝缘老化前伸长测试数据3
+     */
+    private Double thermalLifeInsulUnagedElongationTd3;
+
+    /**
+     * 热寿命绝缘老化前伸长测试数据4
+     */
+    private Double thermalLifeInsulUnagedElongationTd4;
+
+    /**
+     * 热寿命绝缘老化前伸长测试数据5
+     */
+    private Double thermalLifeInsulUnagedElongationTd5;
+
+    /**
+     * 热寿命绝缘老化前伸长测试数据6
+     */
+    private Double thermalLifeInsulUnagedElongationTd6;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据1
+     */
+    private Double thermalLifeInsulUnagedPullTd1;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据2
+     */
+    private Double thermalLifeInsulUnagedPullTd2;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据3
+     */
+    private Double thermalLifeInsulUnagedPullTd3;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据4
+     */
+    private Double thermalLifeInsulUnagedPullTd4;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据5
+     */
+    private Double thermalLifeInsulUnagedPullTd5;
+
+    /**
+     * 热寿命绝缘老化前拉力测试数据6
+     */
+    private Double thermalLifeInsulUnagedPullTd6;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据1
+     */
+    private Double thermalLifeInsulAgingElongationTd1;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据2
+     */
+    private Double thermalLifeInsulAgingElongationTd2;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据3
+     */
+    private Double thermalLifeInsulAgingElongationTd3;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据4
+     */
+    private Double thermalLifeInsulAgingElongationTd4;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据5
+     */
+    private Double thermalLifeInsulAgingElongationTd5;
+
+    /**
+     * 热寿命绝缘老化后伸长测试数据6
+     */
+    private Double thermalLifeInsulAgingElongationTd6;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据1
+     */
+    private Double thermalLifeInsulAgingPullTd1;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据2
+     */
+    private Double thermalLifeInsulAgingPullTd2;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据3
+     */
+    private Double thermalLifeInsulAgingPullTd3;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据4
+     */
+    private Double thermalLifeInsulAgingPullTd4;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据5
+     */
+    private Double thermalLifeInsulAgingPullTd5;
+
+    /**
+     * 热寿命绝缘老化后拉力测试数据6
+     */
+    private Double thermalLifeInsulAgingPullTd6;
+
+    /**
+     * 绝缘热延伸试验负荷下热延伸率
+     */
+    private Double insulHotStretchLoadHte;
+
+    /**
+     * 绝缘热延伸试验冷却后热延伸率
+     */
+    private Double insulHotStretchCoolingHte;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

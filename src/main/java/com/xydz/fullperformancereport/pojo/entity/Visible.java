@@ -530,6 +530,86 @@ public class Visible implements Serializable {
      */
     private Boolean isCompatibilitySheathAgingTs;
 
+    /**
+     * 老化条件是否可见
+     */
+    private Boolean isBiCondition;
+
+    /**
+     * 耐酸条件是否可见
+     */
+    private Boolean isArCondition;
+
+    /**
+     * 护套耐酸前延伸率是否可见
+     */
+    private Boolean isArSheathUnagedEi;
+
+    /**
+     * 护套耐酸后延伸率是否可见
+     */
+    private Boolean isArSheathAgingEi;
+
+    /**
+     * 护套耐酸抗张变化率是否可见
+     */
+    private Boolean isArSheathAgingTsChang;
+
+    /**
+     * 护套耐碱前延伸率是否可见
+     */
+    private Boolean isApSheathUnagedEi;
+
+    /**
+     * 护套耐碱后延伸率是否可见
+     */
+    private Boolean isApSheathAgingEi;
+
+    /**
+     * 护套耐碱抗张变化率是否可见
+     */
+    private Boolean isApSheathAgingTsChang;
+
+    /**
+     * 热寿命条件是否可见
+     */
+    private Boolean isThermalLifeCondition;
+
+    /**
+     * 绝缘热寿命后延伸保留率是否可见
+     */
+    private Boolean isThermalLifeInsulAgingEiRetain;
+
+    /**
+     * 护套热寿命后延伸保留率是否可见
+     */
+    private Boolean isThermalLifeSheathAgingEiRetain;
+
+    /**
+     * 绝缘热延伸是否可见
+     */
+    private Boolean isInsulHotStretchLoadHte;
+
+    /**
+     * 护套热延伸是否可见
+     */
+    private Boolean isSheathHotStretchLoadHte;
+
+    /**
+     * C1是否可见
+     */
+    private Boolean isC1;
+
+    /**
+     * B2是否可见
+     */
+    private Boolean isB2;
+
+    /**
+     * 耐碱条件是否可见
+     */
+    private Boolean isApCondition;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
