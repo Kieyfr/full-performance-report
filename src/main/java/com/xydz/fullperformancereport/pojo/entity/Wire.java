@@ -609,6 +609,11 @@ public class Wire implements Serializable {
      */
     private Double irCalc;
 
+    /**
+     * IEC绝缘电阻测试数据
+     */
+    private Double irCalcIec;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

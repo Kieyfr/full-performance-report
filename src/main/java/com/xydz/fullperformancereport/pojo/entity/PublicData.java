@@ -2585,6 +2585,366 @@ public class PublicData implements Serializable {
      */
     private Double br;
 
+    /**
+     * 数量
+     */
+    private Double numUl;
+
+    /**
+     * UL线径测试数据1
+     */
+    private Double diameterUlTd1;
+
+    /**
+     * UL线径测试数据2
+     */
+    private Double diameterUlTd2;
+
+    /**
+     * UL线径测试数据3
+     */
+    private Double diameterUlTd3;
+
+    /**
+     * UL线径测试数据4
+     */
+    private Double diameterUlTd4;
+
+    /**
+     * UL线径测试数据5
+     */
+    private Double diameterUlTd5;
+
+    /**
+     * UL线径测试数据6
+     */
+    private Double diameterUlTd6;
+
+    /**
+     * UL绝缘外径测试数据1
+     */
+    private Double insulOdUlTd1;
+
+    /**
+     * UL绝缘外径测试数据2
+     */
+    private Double insulOdUlTd2;
+
+    /**
+     * UL绝缘外径测试数据3
+     */
+    private Double insulOdUlTd3;
+
+    /**
+     * UL绝缘外径测试数据4
+     */
+    private Double insulOdUlTd4;
+
+    /**
+     * UL绝缘外径测试数据5
+     */
+    private Double insulOdUlTd5;
+
+    /**
+     * UL绝缘外径测试数据6
+     */
+    private Double insulOdUlTd6;
+
+    /**
+     * UL绝缘外径测试数据
+     */
+    private Double insulOdUlTd;
+
+    /**
+     * UL绝缘厚度测试数据1
+     */
+    private Double insulThkUlTd1;
+
+    /**
+     * UL绝缘厚度测试数据2
+     */
+    private Double insulThkUlTd2;
+
+    /**
+     * UL绝缘厚度测试数据3
+     */
+    private Double insulThkUlTd3;
+
+    /**
+     * UL绝缘厚度测试数据4
+     */
+    private Double insulThkUlTd4;
+
+    /**
+     * UL绝缘厚度测试数据5
+     */
+    private Double insulThkUlTd5;
+
+    /**
+     * UL绝缘厚度测试数据6
+     */
+    private Double insulThkUlTd6;
+
+    /**
+     * UL绝缘厚度测试数据7
+     */
+    private Double insulThkUlTd7;
+
+    /**
+     * UL绝缘厚度测试数据8
+     */
+    private Double insulThkUlTd8;
+
+    /**
+     * UL绝缘厚度测试数据9
+     */
+    private Double insulThkUlTd9;
+
+    /**
+     * UL绝缘厚度测试数据10
+     */
+    private Double insulThkUlTd10;
+
+    /**
+     * Ul护套厚度测试数据1
+     */
+    private Double sheathThkUlTd1;
+
+    /**
+     * Ul护套厚度测试数据2
+     */
+    private Double sheathThkUlTd2;
+
+    /**
+     * Ul护套厚度测试数据3
+     */
+    private Double sheathThkUlTd3;
+
+    /**
+     * Ul护套厚度测试数据4
+     */
+    private Double sheathThkUlTd4;
+
+    /**
+     * Ul护套厚度测试数据5
+     */
+    private Double sheathThkUlTd5;
+
+    /**
+     * Ul护套厚度测试数据6
+     */
+    private Double sheathThkUlTd6;
+
+    /**
+     * Ul护套厚度测试数据7
+     */
+    private Double sheathThkUlTd7;
+
+    /**
+     * Ul护套厚度测试数据8
+     */
+    private Double sheathThkUlTd8;
+
+    /**
+     * Ul护套厚度测试数据9
+     */
+    private Double sheathThkUlTd9;
+
+    /**
+     * Ul护套厚度测试数据10
+     */
+    private Double sheathThkUlTd10;
+
+    /**
+     * 绝缘平均厚度判断值
+     */
+    private Double insulAvgThkUl;
+
+    /**
+     * 绝缘最小厚度判断值
+     */
+    private Double insulMinThkUl;
+
+    /**
+     * 护套平均厚度判断值
+     */
+    private Double sheathAvgThkUl;
+
+    /**
+     * 护套最小厚度判断值
+     */
+    private Double sheathMinThkUl;
+
+    /**
+     * Ul老化条件温度/℃
+     */
+    private Double biTempUl;
+
+    /**
+     * Ul老化条件时间/H
+     */
+    private Double biTimeUl;
+
+    /**
+     * Ul护套老化前伸长测试数据1
+     */
+    private Double sheathUnagedElongationUlTd1;
+
+    /**
+     * Ul护套老化前伸长测试数据2
+     */
+    private Double sheathUnagedElongationUlTd2;
+
+    /**
+     * Ul护套老化前伸长测试数据3
+     */
+    private Double sheathUnagedElongationUlTd3;
+
+    /**
+     * Ul护套老化前伸长测试数据4
+     */
+    private Double sheathUnagedElongationUlTd4;
+
+    /**
+     * Ul护套老化前伸长测试数据5
+     */
+    private Double sheathUnagedElongationUlTd5;
+
+    /**
+     * Ul护套老化前伸长测试数据6
+     */
+    private Double sheathUnagedElongationUlTd6;
+
+    /**
+     * Ul护套老化前拉力测试数据1
+     */
+    private Double sheathUnagedPullUlTd1;
+
+    /**
+     * Ul护套老化前拉力测试数据2
+     */
+    private Double sheathUnagedPullUlTd2;
+
+    /**
+     * Ul护套老化前拉力测试数据3
+     */
+    private Double sheathUnagedPullUlTd3;
+
+    /**
+     * Ul护套老化前拉力测试数据4
+     */
+    private Double sheathUnagedPullUlTd4;
+
+    /**
+     * Ul护套老化前拉力测试数据5
+     */
+    private Double sheathUnagedPullUlTd5;
+
+    /**
+     * Ul护套老化前拉力测试数据6
+     */
+    private Double sheathUnagedPullUlTd6;
+
+    /**
+     * Ul护套老化后伸长测试数据1
+     */
+    private Double sheathAgingElongationUlTd1;
+
+    /**
+     * Ul护套老化后伸长测试数据2
+     */
+    private Double sheathAgingElongationUlTd2;
+
+    /**
+     * Ul护套老化后伸长测试数据3
+     */
+    private Double sheathAgingElongationUlTd3;
+
+    /**
+     * Ul护套老化后伸长测试数据4
+     */
+    private Double sheathAgingElongationUlTd4;
+
+    /**
+     * Ul护套老化后伸长测试数据5
+     */
+    private Double sheathAgingElongationUlTd5;
+
+    /**
+     * Ul护套老化后伸长测试数据6
+     */
+    private Double sheathAgingElongationUlTd6;
+
+    /**
+     * Ul护套老化后拉力测试数据1
+     */
+    private Double sheathAgingPullUlTd1;
+
+    /**
+     * Ul护套老化后拉力测试数据2
+     */
+    private Double sheathAgingPullUlTd2;
+
+    /**
+     * Ul护套老化后拉力测试数据3
+     */
+    private Double sheathAgingPullUlTd3;
+
+    /**
+     * Ul护套老化后拉力测试数据4
+     */
+    private Double sheathAgingPullUlTd4;
+
+    /**
+     * Ul护套老化后拉力测试数据5
+     */
+    private Double sheathAgingPullUlTd5;
+
+    /**
+     * Ul护套老化后拉力测试数据6
+     */
+    private Double sheathAgingPullUlTd6;
+
+    /**
+     * IEC热延伸试验负荷下热延伸率
+     */
+    private Double sheathHotStretchLoadHteIec;
+
+    /**
+     * IEC热延伸试验冷却后热延伸率
+     */
+    private Double sheathHotStretchCoolingHteIec;
+
+    /**
+     * IEC护套低温弯曲圈数/圈
+     */
+    private Double sheathLtBendLnIec;
+
+    /**
+     * IEC护套低温弯曲是否无开裂
+     */
+    private String sheathLtBendCrackIec;
+
+    /**
+     * 加热前值
+     */
+    private Double sheathBeforeHeatingTd;
+
+    /**
+     * 加热后值
+     */
+    private Double sheathAfterHeatingTd;
+
+    /**
+     * IEC绝缘电阻判断值
+     */
+    private Double irCalcIecDv;
+
+    /**
+     * IEC耐电压测试是否击穿
+     */
+    private String dielectricPokIec;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

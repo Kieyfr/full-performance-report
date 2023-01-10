@@ -610,6 +610,91 @@ public class Visible implements Serializable {
      */
     private Boolean isApCondition;
 
+    /**
+     * Ul导体根数是否可见
+     */
+    private Boolean isNumUl;
+
+    /**
+     * Ul导体单根线径是否可见
+     */
+    private Boolean isDiameterUl;
+
+    /**
+     * Ul绝缘外径是否可见
+     */
+    private Boolean isInsulOdUl;
+
+    /**
+     * Ul绝缘平均厚度是否可见
+     */
+    private Boolean isInsulThkUlAvg;
+
+    /**
+     * Ul绝缘最小厚度是否可见
+     */
+    private Boolean isInsulThkUlMin;
+
+    /**
+     * Ul护套外径是否可见
+     */
+    private Boolean isSheathOdUl;
+
+    /**
+     * Ul护套平均厚度是否可见
+     */
+    private Boolean isSheathThkUlAvg;
+
+    /**
+     * Ul护套最小厚度是否可见
+     */
+    private Boolean isSheathThkUlMin;
+
+    /**
+     * Ul老化条件是否可见
+     */
+    private Boolean isBiConditionUl;
+
+    /**
+     * Ul护套延伸率是否可见
+     */
+    private Boolean isSheathUnagedEiUl;
+
+    /**
+     * Ul护套抗张强度是否可见
+     */
+    private Boolean isSheathUnagedTsUl;
+
+    /**
+     * Ul护套老化后延伸残率是否可见||Ul护套老化延伸变化率是否可见
+     */
+    private Boolean isSheathAgingEiUl;
+
+    /**
+     * Ul护套老化后抗张残率是否可见||Ul护套老化抗张变化率是否可见
+     */
+    private Boolean isSheathAgingTsUl;
+
+    /**
+     * IEC热延伸是否可见
+     */
+    private Boolean isSheathHotStretchLoadHteIec;
+
+    /**
+     * IEC低温弯曲是否可见
+     */
+    private Boolean isLtBendCrackIec;
+
+    /**
+     * IEC绝缘电阻是否可见
+     */
+    private Boolean isIrCalcIec;
+
+    /**
+     * IEC耐电压测试是否可见
+     */
+    private Boolean isDielectricPokIec;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
