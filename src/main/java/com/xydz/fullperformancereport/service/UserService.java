@@ -14,6 +14,8 @@ import java.util.List;
 public interface UserService extends IService<User> {
     List<User> selectAllByUserIdAndUserNameAndUserPermissions(String userId,String userName,Integer userPermissions);
 
+    User searchByUserId(String userId);
+
     int insertSelective(User user);
 
     int updateUserPermissionsByUserId(Integer userPermissions,String userId);
