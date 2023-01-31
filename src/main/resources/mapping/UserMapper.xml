@@ -62,5 +62,12 @@
         set USER_PASSWORD = #{userPassword,jdbcType=VARCHAR}
         where USER_ID = #{userId,jdbcType=VARCHAR}
     </update>
+    <select id="searchByUserId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from FPR_USER
+        where
+        USER_ID = #{userId,jdbcType=VARCHAR}
+    </select>
 
 </mapper>

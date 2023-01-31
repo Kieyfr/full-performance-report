@@ -14,6 +14,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface UserMapper extends BaseMapper<User> {
     List<User> selectAllByUserIdAndUserNameAndUserPermissions(@Param("userId") String userId, @Param("userName") String userName, @Param("userPermissions") Integer userPermissions);
 
+    User searchByUserId(@Param("userId") String userId);
+
     int insertSelective(User user);
 
     int updateUserPermissionsByUserId(@Param("userPermissions") Integer userPermissions, @Param("userId") String userId);

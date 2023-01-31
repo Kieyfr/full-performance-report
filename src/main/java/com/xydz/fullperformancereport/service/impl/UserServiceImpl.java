@@ -26,6 +26,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
     @Override
+    public User searchByUserId(String userId) {
+        return userMapper.searchByUserId(userId);
+    }
+
+    @Override
     public int insertSelective(User user) {
         return userMapper.insertSelective(user);
     }
