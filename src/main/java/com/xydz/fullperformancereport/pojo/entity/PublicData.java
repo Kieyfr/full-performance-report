@@ -2945,6 +2945,66 @@ public class PublicData implements Serializable {
      */
     private String dielectricPokIec;
 
+    /**
+     * 附着力
+     */
+    private Double adhesion;
+
+    /**
+     * 低温卷绕直径
+     */
+    private Double lowTemperatureWindingDiameter;
+
+    /**
+     * 热过载直径
+     */
+    private Double thermalOverloadDiameter;
+
+    /**
+     * 热过载重量
+     */
+    private Double thermalOverloadWeight;
+
+    /**
+     * 耐液体性汽油直径
+     */
+    private Double waterResistanceGasolineDiameter;
+
+    /**
+     * 耐液体性柴油直径
+     */
+    private Double waterResistanceDieselOilDiameter;
+
+    /**
+     * 耐液体性乙醇直径
+     */
+    private Double waterResistanceEthanolDiameter;
+
+    /**
+     * 耐液体性电池酸直径
+     */
+    private Double waterResistanceBatteryAcidDiameter;
+
+    /**
+     * 耐液体性发动机润滑油直径
+     */
+    private Double waterResistanceEngineOilDiameter;
+
+    /**
+     * 耐液体性转向助力液直径
+     */
+    private Double waterResistancePowerSteeringFluidDiameter;
+
+    /**
+     * 耐液体性自动排挡液直径||耐液体性自动变速箱油直径
+     */
+    private Double waterResistanceAtfDiameter;
+
+    /**
+     * 耐液体性防冻液直径
+     */
+    private Double waterResistanceAntifreezeDiameter;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
