@@ -3005,6 +3005,66 @@ public class PublicData implements Serializable {
      */
     private Double waterResistanceAntifreezeDiameter;
 
+    /**
+     * 工频交流电压是否无击穿
+     */
+    private String powerFrequencyVoltagePok;
+
+    /**
+     * 击穿电压是否无击穿
+     */
+    private String breakdownVoltagePok;
+
+    /**
+     * 高温压力测试值
+     */
+    private Double hthpTd;
+
+    /**
+     * 热收缩原长
+     */
+    private Double thermalShrinkageOriginalLength;
+
+    /**
+     * 热收缩加热后长
+     */
+    private Double thermalShrinkageHeatingLenght;
+
+    /**
+     * 过热试验是否无开裂
+     */
+    private String overheatCrack;
+
+    /**
+     * 低温冲击4hr是否无开裂
+     */
+    private String lowTemperatureImpact4hrCrack;
+
+    /**
+     * 附着力是否无脱落
+     */
+    private String adhesionFallOff;
+
+    /**
+     * 剥离是否容易
+     */
+    private String peelEasy;
+
+    /**
+     * 耐油是否无开裂
+     */
+    private String oilResistantCrack;
+
+    /**
+     * 耐燃料是否无开裂
+     */
+    private String fuelResistantCrack;
+
+    /**
+     * 耐磨性重量
+     */
+    private Double arWeight;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

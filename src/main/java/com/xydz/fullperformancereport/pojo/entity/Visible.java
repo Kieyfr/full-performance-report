@@ -695,6 +695,41 @@ public class Visible implements Serializable {
      */
     private Boolean isDielectricPokIec;
 
+    /**
+     * 工频交流电压是否可见
+     */
+    private Boolean isPowerFrequencyVoltage;
+
+    /**
+     * 击穿电压是否可见
+     */
+    private Boolean isBreakdownVoltage;
+
+    /**
+     * 过热试验是否可见
+     */
+    private Boolean isOverheat;
+
+    /**
+     * 低温冲击4hr是否可见
+     */
+    private Boolean isLowTemperatureImpact4hr;
+
+    /**
+     * 剥离是否可见
+     */
+    private Boolean isPeel;
+
+    /**
+     * 耐油是否可见
+     */
+    private Boolean isOilResistant;
+
+    /**
+     * 耐燃料是否可见
+     */
+    private Boolean isFuelResistant;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
