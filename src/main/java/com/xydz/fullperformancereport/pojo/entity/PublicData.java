@@ -3065,6 +3065,51 @@ public class PublicData implements Serializable {
      */
     private Double arWeight;
 
+    /**
+     * 耐电压测试介电文字
+     */
+    private String withstandVoltageDielectricText;
+
+    /**
+     * 耐电压测试介电浸水
+     */
+    private String withstandVoltageDielectricImmersion;
+
+    /**
+     * 耐电压测试电压
+     */
+    private Double withstandVoltageVoltage;
+
+    /**
+     * 耐电压测试升高电压
+     */
+    private Double withstandVoltageRaiseVoltage;
+
+    /**
+     * 短期老化直径
+     */
+    private Double shortTermAgingDiameter;
+
+    /**
+     * 耐液体性转向助力液是否无击穿
+     */
+    private String waterResistancePowerSteeringFluidPok;
+
+    /**
+     * 耐液体性制动液圈数
+     */
+    private Double waterResistanceBrakeFluidLn;
+
+    /**
+     * 耐液体性制动液是否无开裂
+     */
+    private String waterResistanceBrakeFluidCrack;
+
+    /**
+     * 耐液体性制动液是否无击穿
+     */
+    private String waterResistanceBrakeFluidPok;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
