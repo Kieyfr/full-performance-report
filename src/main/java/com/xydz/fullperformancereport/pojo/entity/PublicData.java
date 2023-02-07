@@ -3110,6 +3110,141 @@ public class PublicData implements Serializable {
      */
     private String waterResistanceBrakeFluidPok;
 
+    /**
+     * 卷绕加热圈数
+     */
+    private Double windingHeatingLn;
+
+    /**
+     * 卷绕加热是否开裂
+     */
+    private String windingHeatingCrack;
+
+    /**
+     * 卷绕加热直径
+     */
+    private Double windingHeatingDiameter;
+
+    /**
+     * 20℃绝缘电阻长
+     */
+    private Double ir20Length;
+
+    /**
+     * 20℃绝缘电阻测试数据
+     */
+    private Double ir20Td;
+
+    /**
+     * 20℃绝缘电阻判断值
+     */
+    private Double ir20CalcDv;
+
+    /**
+     * 60℃绝缘电阻长
+     */
+    private Double ir60Length;
+
+    /**
+     * 60℃绝缘电阻测试数据
+     */
+    private Double ir60Td;
+
+    /**
+     * 60℃绝缘电阻判断值
+     */
+    private Double ir60CalcDv;
+
+    /**
+     * 耐电压测试(浸水)耐压/kv
+     */
+    private Double dielectricImmersionWithstandVoltage;
+
+    /**
+     * 耐电压测试(浸水)耐压时间/min
+     */
+    private Double dielectricImmersionWithstandVoltageTime;
+
+    /**
+     * 耐电压测试(浸水)是否击穿
+     */
+    private String dielectricImmersionWithstandVoltagePok;
+
+    /**
+     * 耐电压测试(空气)耐压/kv
+     */
+    private Double dielectricAirWithstandVoltage;
+
+    /**
+     * 耐电压测试(空气)耐压时间/min
+     */
+    private Double dielectricAirWithstandVoltageTime;
+
+    /**
+     * 耐电压测试(空气)是否击穿
+     */
+    private String dielectricAirWithstandVoltagePok;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据1
+     */
+    private Double sheathDumbbellSliceUnagedThkTd1;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据2
+     */
+    private Double sheathDumbbellSliceUnagedThkTd2;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据3
+     */
+    private Double sheathDumbbellSliceUnagedThkTd3;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据4
+     */
+    private Double sheathDumbbellSliceUnagedThkTd4;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据5
+     */
+    private Double sheathDumbbellSliceUnagedThkTd5;
+
+    /**
+     * 护套哑铃片老化前厚度测试数据6
+     */
+    private Double sheathDumbbellSliceUnagedThkTd6;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据1
+     */
+    private Double sheathDumbbellSliceAgingThkTd1;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据2
+     */
+    private Double sheathDumbbellSliceAgingThkTd2;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据3
+     */
+    private Double sheathDumbbellSliceAgingThkTd3;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据4
+     */
+    private Double sheathDumbbellSliceAgingThkTd4;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据5
+     */
+    private Double sheathDumbbellSliceAgingThkTd5;
+
+    /**
+     * 护套哑铃片老化后厚度测试数据6
+     */
+    private Double sheathDumbbellSliceAgingThkTd6;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

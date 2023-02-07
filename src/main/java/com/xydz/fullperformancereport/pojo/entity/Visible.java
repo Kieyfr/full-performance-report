@@ -730,6 +730,31 @@ public class Visible implements Serializable {
      */
     private Boolean isFuelResistant;
 
+    /**
+     * 卷绕加热是否可见
+     */
+    private Boolean isWindingHeating;
+
+    /**
+     * 20℃绝缘电阻是否可见
+     */
+    private Boolean isIr20Calc;
+
+    /**
+     * 60℃绝缘电阻是否可见
+     */
+    private Boolean isIr60Calc;
+
+    /**
+     * 耐电压测试(浸水)是否可见
+     */
+    private Boolean isDielectricImmersion;
+
+    /**
+     * 耐电压测试(空气)是否可见
+     */
+    private Boolean isDielectricAir;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
