@@ -139,11 +139,6 @@ public class Report implements Serializable {
      */
     private String updateUserName;
 
-    /**
-     * 计算模板
-     */
-    private String calculationTemplate;
-
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

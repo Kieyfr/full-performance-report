@@ -2578,12 +2578,12 @@ public class PublicData implements Serializable {
     /**
      * Cl测试值
      */
-    private Double cl;
+    private String cl;
 
     /**
      * Br测试值
      */
-    private Double br;
+    private String br;
 
     /**
      * 数量
@@ -3244,6 +3244,81 @@ public class PublicData implements Serializable {
      * 护套哑铃片老化后厚度测试数据6
      */
     private Double sheathDumbbellSliceAgingThkTd6;
+
+    /**
+     * 热冲击文本
+     */
+    private String tsText;
+
+    /**
+     * 低温弯曲文本
+     */
+    private String ltBendText;
+
+    /**
+     * 柔韧性文本
+     */
+    private String flexibilityText;
+
+    /**
+     * 护套老化计算模板
+     */
+    private String sheathAgingCt;
+
+    /**
+     * 加热变形计算模板
+     */
+    private String htgDeformationRateCt;
+
+    /**
+     * 加热变形前线径测试数据
+     */
+    private Double htgFrontDiameter;
+
+    /**
+     * 加热变形后线径测试数据
+     */
+    private Double htgRearDiameter;
+
+    /**
+     * 加热变形心棒直径测试数据
+     */
+    private Double htgMandrelDiameter;
+
+    /**
+     * 绝缘电阻判断文本
+     */
+    private String irCalcDvText;
+
+    /**
+     * 绝缘电阻判断结果
+     */
+    private String irCalcDvResult;
+
+    /**
+     * 绝缘电阻温度
+     */
+    private Double irCalcTemp;
+
+    /**
+     * 绝缘热冲击直径
+     */
+    private String insulTsDiameter;
+
+    /**
+     * 护套热冲击直径
+     */
+    private String sheathTsDiameter;
+
+    /**
+     * 绝缘低温弯曲直径
+     */
+    private String insulLtBendDiameter;
+
+    /**
+     * 护套低温弯曲直径
+     */
+    private String sheathLtBendDiameter;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
