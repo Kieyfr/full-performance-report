@@ -3320,6 +3320,16 @@ public class PublicData implements Serializable {
      */
     private String sheathLtBendDiameter;
 
+    /**
+     * 耐热水测试值MΩ(正向)
+     */
+    private Double hotWaterResistanceForwardSampleLength;
+
+    /**
+     * 耐热水测试值MΩ(反向)
+     */
+    private Double hotWaterResistanceReverseSampleLength;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
