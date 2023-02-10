@@ -57,7 +57,9 @@
         THERMAL_LIFE_INSUL_AGING_PULL_TD2,THERMAL_LIFE_INSUL_AGING_PULL_TD3,
         THERMAL_LIFE_INSUL_AGING_PULL_TD4,THERMAL_LIFE_INSUL_AGING_PULL_TD5,
         THERMAL_LIFE_INSUL_AGING_PULL_TD6,INSUL_HOT_STRETCH_LOAD_HTE,INSUL_HOT_STRETCH_COOLING_HTE,
-        IR_CALC,IR_CALC_IEC
+        IR_CALC,IR_CALC_IEC,AR,INSUL_THERMAL_SHRINKAGE,HOT_WATER_RESISTANCE_FORWARD,
+        HOT_WATER_RESISTANCE_REVERSE,HOT_WATER_RESISTANCE_FORWARD_SAMPLE_LENGTH,
+        HOT_WATER_RESISTANCE_REVERSE_SAMPLE_LENGTH,HOT_WATER_RESISTANCE_CRACK,PEEL_STRENGTH,ADHESION
     </sql>
     <delete id="deleteListAllByReportNoAndId">
         delete
@@ -267,6 +269,192 @@
             </if>
             <if test="insulThkTd18!=null and insulThkTd18!=''">
                 INSUL_THK_TD18 = #{insulThkTd18},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd1!=null and compatibilityInsulUnagedElongationTd1!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD1 = #{compatibilityInsulUnagedElongationTd1},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd2!=null and compatibilityInsulUnagedElongationTd2!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD2 = #{compatibilityInsulUnagedElongationTd2},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd3!=null and compatibilityInsulUnagedElongationTd3!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD3 = #{compatibilityInsulUnagedElongationTd3},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd4!=null and compatibilityInsulUnagedElongationTd4!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD4 = #{compatibilityInsulUnagedElongationTd4},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd5!=null and compatibilityInsulUnagedElongationTd5!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD5 = #{compatibilityInsulUnagedElongationTd5},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd6!=null and compatibilityInsulUnagedElongationTd6!=''">
+                COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD6 = #{compatibilityInsulUnagedElongationTd6},
+            </if>
+            <if test="compatibilityInsulUnagedElongationTd1!=null and compatibilityInsulUnagedElongationTd1!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD1 = #{compatibilityInsulUnagedElongationTd1},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd1!=null and compatibilityInsulUnagedPullTd1!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD1 = #{compatibilityInsulUnagedPullTd1},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd2!=null and compatibilityInsulUnagedPullTd2!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD2 = #{compatibilityInsulUnagedPullTd2},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd3!=null and compatibilityInsulUnagedPullTd3!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD3 = #{compatibilityInsulUnagedPullTd3},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd4!=null and compatibilityInsulUnagedPullTd4!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD4 = #{compatibilityInsulUnagedPullTd4},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd5!=null and compatibilityInsulUnagedPullTd5!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD5 = #{compatibilityInsulUnagedPullTd5},
+            </if>
+            <if test="compatibilityInsulUnagedPullTd6!=null and compatibilityInsulUnagedPullTd6!=''">
+                COMPATIBILITY_INSUL_UNAGED_PULL_TD6 = #{compatibilityInsulUnagedPullTd6},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd1!=null and compatibilityInsulAgingElongationTd1!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD1 = #{compatibilityInsulAgingElongationTd1},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd2!=null and compatibilityInsulAgingElongationTd2!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD2 = #{compatibilityInsulAgingElongationTd2},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd3!=null and compatibilityInsulAgingElongationTd3!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD3 = #{compatibilityInsulAgingElongationTd3},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd4!=null and compatibilityInsulAgingElongationTd4!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD4 = #{compatibilityInsulAgingElongationTd4},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd5!=null and compatibilityInsulAgingElongationTd5!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD5 = #{compatibilityInsulAgingElongationTd5},
+            </if>
+            <if test="compatibilityInsulAgingElongationTd6!=null and compatibilityInsulAgingElongationTd6!=''">
+                COMPATIBILITY_INSUL_AGING_ELONGATION_TD6 = #{compatibilityInsulAgingElongationTd6},
+            </if>
+            <if test="compatibilityInsulAgingPullTd1!=null and compatibilityInsulAgingPullTd1!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD1 = #{compatibilityInsulAgingPullTd1},
+            </if>
+            <if test="compatibilityInsulAgingPullTd2!=null and compatibilityInsulAgingPullTd2!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD2 = #{compatibilityInsulAgingPullTd2},
+            </if>
+            <if test="compatibilityInsulAgingPullTd3!=null and compatibilityInsulAgingPullTd3!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD3 = #{compatibilityInsulAgingPullTd3},
+            </if>
+            <if test="compatibilityInsulAgingPullTd4!=null and compatibilityInsulAgingPullTd4!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD4 = #{compatibilityInsulAgingPullTd4},
+            </if>
+            <if test="compatibilityInsulAgingPullTd5!=null and compatibilityInsulAgingPullTd5!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD5 = #{compatibilityInsulAgingPullTd5},
+            </if>
+            <if test="compatibilityInsulAgingPullTd6!=null and compatibilityInsulAgingPullTd6!=''">
+                COMPATIBILITY_INSUL_AGING_PULL_TD6 = #{compatibilityInsulAgingPullTd6},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd1!=null and thermalLifeInsulUnagedElongationTd1!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD1 = #{thermalLifeInsulUnagedElongationTd1},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd2!=null and thermalLifeInsulUnagedElongationTd2!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD2 = #{thermalLifeInsulUnagedElongationTd2},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd3!=null and thermalLifeInsulUnagedElongationTd3!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD3 = #{thermalLifeInsulUnagedElongationTd3},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd4!=null and thermalLifeInsulUnagedElongationTd4!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD4 = #{thermalLifeInsulUnagedElongationTd4},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd5!=null and thermalLifeInsulUnagedElongationTd5!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD5 = #{thermalLifeInsulUnagedElongationTd5},
+            </if>
+            <if test="thermalLifeInsulUnagedElongationTd6!=null and thermalLifeInsulUnagedElongationTd6!=''">
+                THERMAL_LIFE_INSUL_UNAGED_ELONGATION_TD6 = #{thermalLifeInsulUnagedElongationTd6},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd1!=null and thermalLifeInsulUnagedPullTd1!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD1 = #{thermalLifeInsulUnagedPullTd1},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd2!=null and thermalLifeInsulUnagedPullTd2!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD2 = #{thermalLifeInsulUnagedPullTd2},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd3!=null and thermalLifeInsulUnagedPullTd3!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD3 = #{thermalLifeInsulUnagedPullTd3},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd4!=null and thermalLifeInsulUnagedPullTd4!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD4 = #{thermalLifeInsulUnagedPullTd4},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd5!=null and thermalLifeInsulUnagedPullTd5!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD5 = #{thermalLifeInsulUnagedPullTd5},
+            </if>
+            <if test="thermalLifeInsulUnagedPullTd6!=null and thermalLifeInsulUnagedPullTd6!=''">
+                THERMAL_LIFE_INSUL_UNAGED_PULL_TD6 = #{thermalLifeInsulUnagedPullTd6},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd1!=null and thermalLifeInsulAgingElongationTd1!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD1 = #{thermalLifeInsulAgingElongationTd1},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd2!=null and thermalLifeInsulAgingElongationTd2!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD2 = #{thermalLifeInsulAgingElongationTd2},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd3!=null and thermalLifeInsulAgingElongationTd3!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD3 = #{thermalLifeInsulAgingElongationTd3},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd4!=null and thermalLifeInsulAgingElongationTd4!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD4 = #{thermalLifeInsulAgingElongationTd4},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd5!=null and thermalLifeInsulAgingElongationTd5!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD5 = #{thermalLifeInsulAgingElongationTd5},
+            </if>
+            <if test="thermalLifeInsulAgingElongationTd6!=null and thermalLifeInsulAgingElongationTd6!=''">
+                THERMAL_LIFE_INSUL_AGING_ELONGATION_TD6 = #{thermalLifeInsulAgingElongationTd6},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd1!=null and thermalLifeInsulAgingPullTd1!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD1 = #{thermalLifeInsulAgingPullTd1},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd2!=null and thermalLifeInsulAgingPullTd2!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD2 = #{thermalLifeInsulAgingPullTd2},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd3!=null and thermalLifeInsulAgingPullTd3!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD3 = #{thermalLifeInsulAgingPullTd3},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd4!=null and thermalLifeInsulAgingPullTd4!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD4 = #{thermalLifeInsulAgingPullTd4},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd5!=null and thermalLifeInsulAgingPullTd5!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD5 = #{thermalLifeInsulAgingPullTd5},
+            </if>
+            <if test="thermalLifeInsulAgingPullTd6!=null and thermalLifeInsulAgingPullTd6!=''">
+                THERMAL_LIFE_INSUL_AGING_PULL_TD6 = #{thermalLifeInsulAgingPullTd6},
+            </if>
+            <if test="insulHotStretchLoadHte!=null and insulHotStretchLoadHte!=''">
+                INSUL_HOT_STRETCH_LOAD_HTE = #{insulHotStretchLoadHte},
+            </if>
+            <if test="insulHotStretchCoolingHte!=null and insulHotStretchCoolingHte!=''">
+                INSUL_HOT_STRETCH_COOLING_HTE = #{insulHotStretchCoolingHte},
+            </if>
+            <if test="irCalc!=null and irCalc!=''">
+                IR_CALC = #{irCalc},
+            </if>
+            <if test="irCalcIec!=null and irCalcIec!=''">
+                IR_CALC_IEC = #{irCalcIec},
+            </if>
+            <if test="ar!=null and ar!=''">
+                AR = #{ar},
+            </if>
+            <if test="insulThermalShrinkage!=null and insulThermalShrinkage!=''">
+                INSUL_THERMAL_SHRINKAGE = #{insulThermalShrinkage},
+            </if>
+            <if test="hotWaterResistanceForward!=null and hotWaterResistanceForward!=''">
+                HOT_WATER_RESISTANCE_FORWARD = #{hotWaterResistanceForward},
+            </if>
+            <if test="hotWaterResistanceReverse!=null and hotWaterResistanceReverse!=''">
+                HOT_WATER_RESISTANCE_REVERSE = #{hotWaterResistanceReverse},
+            </if>
+            <if test="hotWaterResistanceForwardSampleLength!=null and hotWaterResistanceForwardSampleLength!=''">
+                HOT_WATER_RESISTANCE_FORWARD_SAMPLE_LENGTH = #{hotWaterResistanceForwardSampleLength},
+            </if>
+            <if test="hotWaterResistanceReverseSampleLength!=null and hotWaterResistanceReverseSampleLength!=''">
+                HOT_WATER_RESISTANCE_REVERSE_SAMPLE_LENGTH = #{hotWaterResistanceReverseSampleLength},
+            </if>
+            <if test="hotWaterResistanceCrack!=null and hotWaterResistanceCrack!=''">
+                HOT_WATER_RESISTANCE_CRACK = #{hotWaterResistanceCrack},
+            </if>
+            <if test="peelStrength!=null and peelStrength!=''">
+                PEEL_STRENGTH = #{peelStrength},
+            </if>
+            <if test="adhesion!=null and adhesion!=''">
+                ADHESION = #{adhesion},
             </if>
             ID = #{id}
         </set>

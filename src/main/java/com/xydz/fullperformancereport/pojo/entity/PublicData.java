@@ -3330,6 +3330,16 @@ public class PublicData implements Serializable {
      */
     private Double hotWaterResistanceReverseSampleLength;
 
+    /**
+     * 热过载温度
+     */
+    private Double thermalOverloadTemp;
+
+    /**
+     * 护套热收缩测试值
+     */
+    private Double sheathThermalShrinkage;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

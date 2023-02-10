@@ -614,6 +614,51 @@ public class Wire implements Serializable {
      */
     private Double irCalcIec;
 
+    /**
+     * 耐磨性（刮磨）测试值
+     */
+    private Double ar;
+
+    /**
+     * 绝缘热收缩测试值
+     */
+    private Double insulThermalShrinkage;
+
+    /**
+     * 耐热水测试值(正向)
+     */
+    private Double hotWaterResistanceForward;
+
+    /**
+     * 耐热水测试值(反向)
+     */
+    private Double hotWaterResistanceReverse;
+
+    /**
+     * 耐热水样品长度(正向)
+     */
+    private Double hotWaterResistanceForwardSampleLength;
+
+    /**
+     * 耐热水样品长度(反向)
+     */
+    private Double hotWaterResistanceReverseSampleLength;
+
+    /**
+     * 耐热水是否无击穿
+     */
+    private String hotWaterResistanceCrack;
+
+    /**
+     * 剥离力
+     */
+    private Double peelStrength;
+
+    /**
+     * 附着力
+     */
+    private Double adhesion;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
