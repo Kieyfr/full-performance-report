@@ -1868,7 +1868,7 @@ public class PublicData implements Serializable {
     /**
      * 室温工频电压试验长度
      */
-    private Double roomTempPowerFrequencyVoltageLenght;
+    private String roomTempPowerFrequencyVoltageLenght;
 
     /**
      * 室温工频电压试验圈数
@@ -3339,6 +3339,21 @@ public class PublicData implements Serializable {
      * 护套热收缩测试值
      */
     private Double sheathThermalShrinkage;
+
+    /**
+     * 低温冲击温度
+     */
+    private Double lowTemperatureTemp;
+
+    /**
+     * 绝缘失重判断值
+     */
+    private Double insulWlDv;
+
+    /**
+     * 护套失重判断值
+     */
+    private Double sheathWlDv;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

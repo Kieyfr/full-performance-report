@@ -288,9 +288,6 @@
             <if test="compatibilityInsulUnagedElongationTd6!=null and compatibilityInsulUnagedElongationTd6!=''">
                 COMPATIBILITY_INSUL_UNAGED_ELONGATION_TD6 = #{compatibilityInsulUnagedElongationTd6},
             </if>
-            <if test="compatibilityInsulUnagedElongationTd1!=null and compatibilityInsulUnagedElongationTd1!=''">
-                COMPATIBILITY_INSUL_UNAGED_PULL_TD1 = #{compatibilityInsulUnagedElongationTd1},
-            </if>
             <if test="compatibilityInsulUnagedPullTd1!=null and compatibilityInsulUnagedPullTd1!=''">
                 COMPATIBILITY_INSUL_UNAGED_PULL_TD1 = #{compatibilityInsulUnagedPullTd1},
             </if>
