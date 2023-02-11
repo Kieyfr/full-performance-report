@@ -755,6 +755,16 @@ public class Visible implements Serializable {
      */
     private Boolean isDielectricAir;
 
+    /**
+     * 绝缘低温弯曲是否可见
+     */
+    private Boolean isInsulLtBendCrack;
+
+    /**
+     * 护套低温弯曲是否可见
+     */
+    private Boolean isSheathLtBendCrack;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
