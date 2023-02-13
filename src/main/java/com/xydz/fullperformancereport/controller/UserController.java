@@ -104,6 +104,7 @@ public class UserController {
      * @return null
      */
     @PostMapping("modPermissions")
+    @ApiOperation(value = "修改权限")
     public ResponseData<String> modPermissions(@RequestBody User user){
 
         User oldUser=userService.searchByUserId(user.getUserId());
@@ -129,6 +130,7 @@ public class UserController {
      * @return null
      */
     @PostMapping("delUser")
+    @ApiOperation(value = "删除用户")
     public ResponseData<String> delUser(@RequestBody User user){
         User Loginuser=LoginUtil.getLoginUser();
         if (user.getUserPermissions()<Loginuser.getUserPermissions()){
@@ -150,6 +152,7 @@ public class UserController {
      * @return null
      */
     @PostMapping("resetUserPassword")
+    @ApiOperation(value = "重置密码")
     public ResponseData<String> resetUserPassword(@RequestBody User user){
 
         User Loginuser=LoginUtil.getLoginUser();
