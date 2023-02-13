@@ -1963,32 +1963,32 @@ public class PublicData implements Serializable {
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据1
      */
-    private Double zTbfStartDistanceTd1;
+    private Double z1TbfStartDistanceTd1;
 
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据2
      */
-    private Double zTbfStartDistanceTd2;
+    private Double z1TbfStartDistanceTd2;
 
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，上夹具下缘与碳化起始点距离测试数据3
      */
-    private Double zTbfStartDistanceTd3;
+    private Double z1TbfStartDistanceTd3;
 
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据1
      */
-    private Double zTbfBurningDistanceTd1;
+    private Double z1TbfBurningDistanceTd1;
 
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据2
      */
-    private Double zTbfBurningDistanceTd2;
+    private Double z1TbfBurningDistanceTd2;
 
     /**
      * 垂直燃烧试验（代号Z或Z1电缆)供火60S，向下延燃至上夹具下缘距离测试数据3
      */
-    private Double zTbfBurningDistanceTd3;
+    private Double z1TbfBurningDistanceTd3;
 
     /**
      * 兼容性护套老化前伸长测试数据1
