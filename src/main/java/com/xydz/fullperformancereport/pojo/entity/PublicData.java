@@ -3355,6 +3355,26 @@ public class PublicData implements Serializable {
      */
     private Double sheathWlDv;
 
+    /**
+     * 低温弯曲直径
+     */
+    private String ltBendDiameter;
+
+    /**
+     * 低温冲击重量(带符号)
+     */
+    private String lowTemperatureImpactString;
+
+    /**
+     * 过热试验直径
+     */
+    private String overheatDiameter;
+
+    /**
+     * 过热试验圈数
+     */
+    private String overheatLn;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
