@@ -17,8 +17,8 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mapping/*.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
 #
 # 日志配置
 #logging:
@@ -31,4 +31,14 @@ mybatis-plus:
 #      xydz:
 #        full-performance-report:
 #          mapper: DEBUG
+
+logging:
+  file:
+      name: ../full-performance-report-server.log
+  level:
+    root: ERROR
+    com.xydz.fullperformancereport.mapper: DEBUG
+
+
+
 
