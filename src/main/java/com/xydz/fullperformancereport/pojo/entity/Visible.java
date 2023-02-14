@@ -765,6 +765,11 @@ public class Visible implements Serializable {
      */
     private Boolean isSheathLtBendCrack;
 
+    /**
+     * 耐凹痕是否可见
+     */
+    private Boolean isDentResistance;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

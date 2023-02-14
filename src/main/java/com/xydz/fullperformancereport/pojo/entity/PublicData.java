@@ -3375,6 +3375,126 @@ public class PublicData implements Serializable {
      */
     private String overheatLn;
 
+    /**
+     * 整体厚度测试值1
+     */
+    private Double wholeThkTd1;
+
+    /**
+     * 整体厚度测试值2
+     */
+    private Double wholeThkTd2;
+
+    /**
+     * 整体厚度测试值3
+     */
+    private Double wholeThkTd3;
+
+    /**
+     * 整体厚度测试值4
+     */
+    private Double wholeThkTd4;
+
+    /**
+     * 整体厚度测试值5
+     */
+    private Double wholeThkTd5;
+
+    /**
+     * 整体厚度测试值6
+     */
+    private Double wholeThkTd6;
+
+    /**
+     * 整体厚度测试值7
+     */
+    private Double wholeThkTd7;
+
+    /**
+     * 整体厚度测试值8
+     */
+    private Double wholeThkTd8;
+
+    /**
+     * 整体厚度测试值9
+     */
+    private Double wholeThkTd9;
+
+    /**
+     * 整体厚度测试值10
+     */
+    private Double wholeThkTd10;
+
+    /**
+     * 整体厚度测试值11
+     */
+    private Double wholeThkTd11;
+
+    /**
+     * 整体厚度测试值12
+     */
+    private Double wholeThkTd12;
+
+    /**
+     * 整体厚度测试值13
+     */
+    private Double wholeThkTd13;
+
+    /**
+     * 整体厚度测试值14
+     */
+    private Double wholeThkTd14;
+
+    /**
+     * 整体厚度测试值15
+     */
+    private Double wholeThkTd15;
+
+    /**
+     * 整体厚度测试值16
+     */
+    private Double wholeThkTd16;
+
+    /**
+     * 整体厚度测试值17
+     */
+    private Double wholeThkTd17;
+
+    /**
+     * 整体厚度测试值18
+     */
+    private Double wholeThkTd18;
+
+    /**
+     * 85℃耐凹痕无开裂
+     */
+    private String dentResistance85Crack;
+
+    /**
+     * 20℃耐凹痕无开裂
+     */
+    private String dentResistance20Crack;
+
+    /**
+     * -15℃耐凹痕无开裂
+     */
+    private String dentResistance15Crack;
+
+    /**
+     * 护套表面绝缘电阻测试值1
+     */
+    private Double sheathSurfaceIrCalc1;
+
+    /**
+     * 护套表面绝缘电阻测试值2
+     */
+    private Double sheathSurfaceIrCalc2;
+
+    /**
+     * 护套表面绝缘电阻测试值3
+     */
+    private Double sheathSurfaceIrCalc3;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
