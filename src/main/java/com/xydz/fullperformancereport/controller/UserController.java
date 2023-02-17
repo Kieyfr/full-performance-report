@@ -8,6 +8,7 @@ import com.xydz.fullperformancereport.util.JwtUtil;
 import com.xydz.fullperformancereport.util.LoginUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,8 @@ public class UserController {
         User user = userService.getById(LoginUser.getUserId());
         if (user!=null){
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
-                return new ResponseData<String>("402","请更改密码",null);
+                String token = JwtUtil.createToken(user);
+                return new ResponseData<String>("402","请更改密码",token);
             }
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserPassword()))){
                 String token = JwtUtil.createToken(user);
@@ -169,6 +171,28 @@ public class UserController {
         }else{
             return new ResponseData<>("402","权限不足",null);
         }
+    }
+    /**
+     * 首次登录更改密码
+     *
+     * @param newPassword
+     * @return null
+     */
+    @PostMapping("firstLoginChangePassword")
+    @ApiOperation(value = "首次登录更改密码")
+    public ResponseData<String> firstLoginChangePassword(@Param("newPassword")String newPassword){
+
+        User LoginUser=LoginUtil.getLoginUser();
+        System.out.println(LoginUser.getUserPassword());
+            int i = userService.updateUserPasswordByUserId(SecureUtil.md5(newPassword),LoginUser.getUserId());
+            if (i>0){
+                User newLogin=userService.getById(LoginUser.getUserId());
+                String token = JwtUtil.createToken(newLogin);
+                System.out.println(newLogin.getUserPassword());
+                return new ResponseData<>("200","更改成功",token);
+            }else {
+                return new ResponseData<>("401","更改失败",null);
+            }
     }
 
 //    /**
