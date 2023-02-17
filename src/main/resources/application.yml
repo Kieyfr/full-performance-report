@@ -34,7 +34,7 @@ mybatis-plus:
 
 logging:
   file:
-      name: ../full-performance-report-server.log
+      name: /logs/full-performance-report-server.log
   level:
     root: ERROR
     com.xydz.fullperformancereport.mapper: DEBUG
