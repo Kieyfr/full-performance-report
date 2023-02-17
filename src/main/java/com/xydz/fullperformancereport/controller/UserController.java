@@ -32,6 +32,9 @@ public class UserController {
     public ResponseData<String> login(@RequestBody User LoginUser){
         User user = userService.getById(LoginUser.getUserId());
         if (user!=null){
+            if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
+                return new ResponseData<String>("402","请更改密码",null);
+            }
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserPassword()))){
                 String token = JwtUtil.createToken(user);
                 return new ResponseData<String>("200","登录成功",token);
@@ -62,7 +65,6 @@ public class UserController {
     @PostMapping("getUsers")
     @ApiOperation(value = "获取人员信息")
     public ResponseData<List<User>> getUser(@RequestBody User user){
-
             List<User> users=userService.selectAllByUserIdAndUserNameAndUserPermissions(user.getUserId(),user.getUserName(),user.getUserPermissions());
             if (users!=null){
                 return new ResponseData<>("200","获取数据成功",users);
