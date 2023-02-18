@@ -3,8 +3,6 @@ package com.xydz.fullperformancereport.util;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.jwt.JWT;
-import cn.hutool.jwt.JWTValidator;
-import cn.hutool.jwt.signers.JWTSignerUtil;
 import com.xydz.fullperformancereport.pojo.entity.User;
 
 /**
@@ -27,19 +25,11 @@ public class JwtUtil {
     }
 
     public static boolean verify(String token){
-        try {
-            JWTValidator.of(token)
-                    .validateDate()
-                    .validateAlgorithm(JWTSignerUtil.hs256(SECRET));
-        }catch (Exception e){
-            return false;
-        }
-        return true;
+        return JWT.of(token).setKey(SECRET).validate(0);
     }
 
     public static String getData(String token,String dataName){
-        JWT jwt = JWT.of(token);
-        return (String)jwt.getPayload(dataName);
+        return (String)JWT.of(token).getPayload(dataName);
     }
 
 
