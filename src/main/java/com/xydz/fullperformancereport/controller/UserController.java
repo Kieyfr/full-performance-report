@@ -33,6 +33,7 @@ public class UserController {
     public ResponseData<String> login(@RequestBody User LoginUser){
         User user = userService.getById(LoginUser.getUserId());
         if (user!=null){
+            System.out.println(user);
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
                 String token = JwtUtil.createToken(user);
                 return new ResponseData<String>("402","请更改密码",token);
@@ -160,7 +161,7 @@ public class UserController {
     public ResponseData<String> resetUserPassword(@RequestBody User user){
 
         User Loginuser=LoginUtil.getLoginUser();
-        if (user.getUserPermissions()<Loginuser.getUserPermissions()){
+        if (user.getUserPermissions()<=Loginuser.getUserPermissions()){
             user.setUserPassword(SecureUtil.md5(user.getUserId()));
             int i = userService.updateUserPasswordByUserId(user.getUserPassword(),user.getUserId());
             if (i>0){
@@ -183,12 +184,10 @@ public class UserController {
     public ResponseData<String> firstLoginChangePassword(@Param("newPassword")String newPassword){
 
         User LoginUser=LoginUtil.getLoginUser();
-        System.out.println(LoginUser.getUserPassword());
             int i = userService.updateUserPasswordByUserId(SecureUtil.md5(newPassword),LoginUser.getUserId());
             if (i>0){
                 User newLogin=userService.getById(LoginUser.getUserId());
                 String token = JwtUtil.createToken(newLogin);
-                System.out.println(newLogin.getUserPassword());
                 return new ResponseData<>("200","更改成功",token);
             }else {
                 return new ResponseData<>("401","更改失败",null);

@@ -1,6 +1,7 @@
 package com.xydz.fullperformancereport.util;
 
 
+import cn.hutool.crypto.SecureUtil;
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import com.xydz.fullperformancereport.pojo.entity.User;
@@ -23,7 +24,12 @@ public class JwtUtil {
             private static final long serialVersionUID = 1L;
             {
                 put("id", user.getUserId());
-                put("expire_time", System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 15);
+                if(user.getUserPassword().equals(SecureUtil.md5(user.getUserId()))){
+                    put("expire_time", System.currentTimeMillis() + 1000);
+                }else{
+                    put("expire_time", System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 15);
+                }
+
             }
         };
         return map;
