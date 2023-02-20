@@ -34,11 +34,12 @@ public class UserController {
         User user = userService.getById(LoginUser.getUserId());
         if (user!=null){
             System.out.println(user);
-            if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
-                String token = JwtUtil.createToken(user);
-                return new ResponseData<String>("402","请更改密码",token);
-            }
+
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserPassword()))){
+                if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
+                    String token = JwtUtil.createToken(user);
+                    return new ResponseData<String>("402","请更改密码",token);
+                }
                 String token = JwtUtil.createToken(user);
                 return new ResponseData<String>("200","登录成功",token);
             }
