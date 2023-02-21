@@ -33,7 +33,7 @@ public class UserController {
     public ResponseData<String> login(@RequestBody User LoginUser){
         User user = userService.getById(LoginUser.getUserId());
         if (user!=null){
-            System.out.println(user);
+//            System.out.println(user);
 
             if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserPassword()))){
                 if (user.getUserPassword().equals(SecureUtil.md5(LoginUser.getUserId()))){
@@ -84,7 +84,7 @@ public class UserController {
      */
     @PostMapping("addUser")
     @ApiOperation(value = "添加人员信息")
-    public ResponseData<String> addUser(@RequestBody User user){
+    public synchronized ResponseData<String> addUser(@RequestBody User user){
 
 
         if (user!=null){
