@@ -85,19 +85,27 @@ public class UserController {
     @PostMapping("addUser")
     @ApiOperation(value = "添加人员信息")
     public ResponseData<String> addUser(@RequestBody User user){
-        user.setUserPassword(SecureUtil.md5(user.getUserPassword()));
+
+
         if (user!=null){
-            User Loginuser=LoginUtil.getLoginUser();
-            if (user.getUserPermissions()<Loginuser.getUserPermissions()){
-                int i = userService.insertSelective(user);
-                if (i>0){
-                    return new ResponseData<>("200","添加成功",null);
-                }else{
-                    return new ResponseData<>("401","添加失败",null);
-                }
+            User user2 = userService.searchByUserId(user.getUserId());
+            if (user2!=null){
+                return new ResponseData<>("403","工号不能重复",null);
             }else{
-                return new ResponseData<>("402","权限不足",null);
+                User Loginuser=LoginUtil.getLoginUser();
+                user.setUserPassword(SecureUtil.md5(user.getUserPassword()));
+                if (user.getUserPermissions()<Loginuser.getUserPermissions()){
+                    int i = userService.insertSelective(user);
+                    if (i>0){
+                        return new ResponseData<>("200","添加成功",null);
+                    }else{
+                        return new ResponseData<>("401","添加失败",null);
+                    }
+                }else{
+                    return new ResponseData<>("402","权限不足",null);
+                }
             }
+
 
         }
         return new ResponseData<>("404","数据有误",null);
