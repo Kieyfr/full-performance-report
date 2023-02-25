@@ -65,6 +65,11 @@ public class Wire implements Serializable {
     private Double diameterTd6;
 
     /**
+     * 绝缘外径
+     */
+    private String insulOd;
+
+    /**
      * 绝缘外径测试数据1
      */
     private Double insulOdTd1;

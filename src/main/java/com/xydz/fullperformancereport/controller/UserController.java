@@ -85,8 +85,6 @@ public class UserController {
     @PostMapping("addUser")
     @ApiOperation(value = "添加人员信息")
     public synchronized ResponseData<String> addUser(@RequestBody User user){
-
-
         if (user!=null){
             User user2 = userService.searchByUserId(user.getUserId());
             if (user2!=null){

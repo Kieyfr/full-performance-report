@@ -3261,6 +3261,11 @@ public class PublicData implements Serializable {
     private String flexibilityText;
 
     /**
+     * 绝缘外径计算模板
+     */
+    private String insulOdCt;
+
+    /**
      * 护套老化计算模板
      */
     private String sheathAgingCt;
@@ -3269,6 +3274,11 @@ public class PublicData implements Serializable {
      * 加热变形计算模板
      */
     private String htgDeformationRateCt;
+
+    /**
+     * 单支导体计算模板
+     */
+    private String singleConductorCt;
 
     /**
      * 加热变形前线径测试数据

@@ -59,7 +59,7 @@
         THERMAL_LIFE_INSUL_AGING_PULL_TD6,INSUL_HOT_STRETCH_LOAD_HTE,INSUL_HOT_STRETCH_COOLING_HTE,
         IR_CALC,IR_CALC_IEC,AR,INSUL_THERMAL_SHRINKAGE,HOT_WATER_RESISTANCE_FORWARD,
         HOT_WATER_RESISTANCE_REVERSE,HOT_WATER_RESISTANCE_FORWARD_SAMPLE_LENGTH,
-        HOT_WATER_RESISTANCE_REVERSE_SAMPLE_LENGTH,HOT_WATER_RESISTANCE_CRACK,PEEL_STRENGTH,ADHESION
+        HOT_WATER_RESISTANCE_REVERSE_SAMPLE_LENGTH,HOT_WATER_RESISTANCE_CRACK,PEEL_STRENGTH,ADHESION,INSUL_OD
     </sql>
     <delete id="deleteListAllByReportNoAndId">
         delete
@@ -453,7 +453,9 @@
             <if test="adhesion!=null and adhesion!=''">
                 ADHESION = #{adhesion},
             </if>
-            ID = #{id}
+            <if test="insulOd!=null and insulOd!=''">
+                INSUL_OD = #{insulOd},
+            </if>
         </set>
         WHERE REPORT_NO = #{reportNo} AND ID = #{id}
     </update>
