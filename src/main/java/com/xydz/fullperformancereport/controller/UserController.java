@@ -90,22 +90,18 @@ public class UserController {
             if (user2!=null){
                 return new ResponseData<>("403","工号不能重复",null);
             }else{
-                User Loginuser=LoginUtil.getLoginUser();
-                user.setUserPassword(SecureUtil.md5(user.getUserPassword()));
-                if (user.getUserPermissions()<Loginuser.getUserPermissions()){
+                user.setUserPassword(SecureUtil.md5(user.getUserId()));
                     int i = userService.insertSelective(user);
                     if (i>0){
                         return new ResponseData<>("200","添加成功",null);
                     }else{
                         return new ResponseData<>("401","添加失败",null);
                     }
-                }else{
-                    return new ResponseData<>("402","权限不足",null);
                 }
             }
 
 
-        }
+
         return new ResponseData<>("404","数据有误",null);
     }
 
@@ -119,17 +115,21 @@ public class UserController {
     @ApiOperation(value = "修改权限")
     public ResponseData<String> modPermissions(@RequestBody User user){
 
-        User oldUser=userService.searchByUserId(user.getUserId());
 
         User loginUser=LoginUtil.getLoginUser();
 
-        if (oldUser.getUserPermissions()<loginUser.getUserPermissions()&&user.getUserPermissions()<loginUser.getUserPermissions()){
-            int i = userService.updateUserPermissionsByUserId(user.getUserPermissions(), user.getUserId());
-            if (i>0){
-                return new ResponseData<>("200","更改成功",null);
-            }else {
-                return new ResponseData<>("401","更改失败",null);
+        if (loginUser.getUserPermissions()>=3){
+            if (loginUser.getUserId().equals(user.getUserId())){
+                return new ResponseData<>("403","不能更改自己的权限",null);
+            }else{
+                int i = userService.updateUserPermissionsByUserId(user.getUserPermissions(), user.getUserId());
+                if (i>0){
+                    return new ResponseData<>("200","更改成功",null);
+                }else {
+                    return new ResponseData<>("401","更改失败",null);
+                }
             }
+
         }else{
             return new ResponseData<>("402","权限不足",null);
         }
@@ -144,13 +144,17 @@ public class UserController {
     @PostMapping("delUser")
     @ApiOperation(value = "删除用户")
     public ResponseData<String> delUser(@RequestBody User user){
-        User Loginuser=LoginUtil.getLoginUser();
-        if (user.getUserPermissions()<Loginuser.getUserPermissions()){
-            int i = userService.delByUserId(user.getUserId());
-            if (i>0){
-                return new ResponseData<>("200","删除成功",null);
-            }else {
-                return new ResponseData<>("401","删除失败",null);
+        User loginuser=LoginUtil.getLoginUser();
+        if (loginuser.getUserPermissions()>=3){
+            if (loginuser.getUserId().equals(user.getUserId())){
+                return new ResponseData<>("403","不能删除自己",null);
+            }else{
+                int i = userService.delByUserId(user.getUserId());
+                if (i>0){
+                    return new ResponseData<>("200","删除成功",null);
+                }else {
+                    return new ResponseData<>("401","删除失败",null);
+                }
             }
         }else{
             return new ResponseData<>("402","权限不足",null);
@@ -167,8 +171,8 @@ public class UserController {
     @ApiOperation(value = "重置密码")
     public ResponseData<String> resetUserPassword(@RequestBody User user){
 
-        User Loginuser=LoginUtil.getLoginUser();
-        if (user.getUserPermissions()<=Loginuser.getUserPermissions()){
+        User loginuser=LoginUtil.getLoginUser();
+        if (loginuser.getUserPermissions()>=3){
             user.setUserPassword(SecureUtil.md5(user.getUserId()));
             int i = userService.updateUserPasswordByUserId(user.getUserPassword(),user.getUserId());
             if (i>0){
